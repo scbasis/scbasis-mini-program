@@ -2,8 +2,10 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 } 
 
 button {
@@ -20,7 +22,7 @@ button::after{
 
 
 page {
-  background: #f6f6f6;
+  background: #eeeeee;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -1,0 +1,10 @@
+Page Hierarchy:
+-> Home
+  - (Filters bar)
+  - Indivdual discussions (w/ Up/Down)
+    -> discussions page
+      - Original post (w/ Up/Down)
+      - Comments (w/ Up/Down)
+      - Comment box
+  - New discussion
+    -> New discussion page
