@@ -1,0 +1,5 @@
+/* miniprogram/pages/post/post.wxss */
+
+.back-button {
+  margin-top: 5px;
+}
