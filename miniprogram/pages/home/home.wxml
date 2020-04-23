@@ -18,11 +18,11 @@
           {{post.title}}
         </view>
         <view class="vote-container">
-          <button id="{{'upvote-button-' + post.id}}" class="upvote-button">
+          <button id="{{'upvote-button-' + post.id}}" class="upvote-button" bindtap="upv">
             <image class="upvote" mode="WidthFix" src="../../images/upvote.png"></image>
           </button>
           <view class="num-votes">{{post.votes}}</view>
-          <button id="{{'down-button-' + post.id}}" class="downvote-button">
+          <button id="{{'downvote-button-' + post.id}}" class="downvote-button" bindtap="downv">
             <image class="downvote" mode="WidthFix" src="../../images/downvote.png"></image>
           </button>
         </view>

@@ -9,23 +9,74 @@ Page({
       title: "Interesting Title 1",
       body: "Body text here- Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm",
       votes: 420,
-      id: "0000"
+      id: "0000",
+      upvoted: false,
+      downvoted: false
     }, {
         title: "Interesting Title 2",
         body: "More body text here- asdjfha aldsfjasdlf asfj sidjjkasg asfdulhowier",
         votes: 69,
-        id: "0001"
+        id: "0001",
+        upvoted: false,
+        downvoted: false
       }, {
         title: "Interesting Title 3",
         body: "More body text here- asdjfha aldsfjasdlf asfj sidjjkasg asfdulhowier",
         votes: 0,
-        id: "0002"
+        id: "0002",
+        upvoted: false,
+        downvoted: false
       },{
         title: "Interesting Title 4",
         body: "More body text here- asdjfha aldsadjjkasg asfdulhowier",
         votes: -20,
-        id: "0003"
+        id: "0003",
+        upvoted: false,
+        downvoted: false
       }]
+  }, upv: function(event){
+    for (let i = 0; i < this.data.posts.length; i++){
+      if ('upvote-button-' + this.data.posts[i].id == event.currentTarget.id){
+        if (this.data.posts[i].upvoted){
+          this.data.posts[i].votes--;
+          this.data.posts[i].upvoted = false;
+        }
+        else {
+          this.data.posts[i].votes++;
+          this.data.posts[i].upvoted = true;
+          if (this.data.posts[i].downvoted){
+            this.data.posts[i].downvoted = false;
+            this.data.posts[i].votes++;
+          }
+        }
+        break;
+      }
+    }
+    this.setData({
+      posts: this.data.posts
+    })
+  },
+  downv: function(event){
+    for (let i = 0; i < this.data.posts.length; i++){
+      if ('downvote-button-' + this.data.posts[i].id == event.currentTarget.id){
+        if (this.data.posts[i].downvoted){
+          this.data.posts[i].votes++
+          this.data.posts[i].downvoted = false;
+        }
+        else {
+          this.data.posts[i].votes--;
+          this.data.posts[i].downvoted = true;
+          if (this.data.posts[i].upvoted){
+            this.data.posts[i].upvoted = false;
+            this.data.posts[i].votes--;
+          }
+        }
+        break;
+      }
+    }
+    this.setData({
+      posts: this.data.posts
+    })
   },
   /**
    * Lifecycle function--Called when page load
