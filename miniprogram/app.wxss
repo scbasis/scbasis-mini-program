@@ -6,10 +6,19 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font: normal 14px Verdana, Geneva, sans-serif;
+  color: darkslategray;
+  line-height: 1.6em;
 } 
+
+.clr {
+  clear: both;
+}
 
 button {
   background: initial;
+  font-weight: normal !important; 
+  color: inherit;
 }
 
 button:focus{

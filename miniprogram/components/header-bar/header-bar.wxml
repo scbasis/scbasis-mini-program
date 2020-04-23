@@ -1,0 +1,4 @@
+<!--components/header-bar/header-bar.wxml-->
+<view class="header-bar">
+  <slot></slot>
+</view>

@@ -1,0 +1,11 @@
+<!--miniprogram/pages/post/post.wxml-->
+<view class="container">
+  <header-bar>
+    <button class="back-button" size="mini">
+      Back
+    </button>
+  </header-bar>
+
+  
+
+</view>

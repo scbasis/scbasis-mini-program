@@ -1,20 +1,8 @@
 <!--miniprogram/pages/home/home.wxml-->
 <view class="container">
-  <view class="search-bar">
-    <view class="flex-wrp">
-      <view id="spacer-1"></view>
-      <view class="flex-item search-container">
-        <form>
-          <input placeholder="Search topics..."></input>
-          <button><icon type="search"></icon></button>
-        </form>
-      </view>
-      
-      <button class="flex-item nav-button">
-        <image mode="WidthFix" src="../../images/nav.png"></image>
-      </button>
-    </view>
-  </view>
+  <header-bar>
+    <search></search>
+  </header-bar>
 
   <view class="header">
     <view class="header-container">
@@ -24,17 +12,17 @@
   </view>  
   
   <!-- <scroll-view scroll-y> -->
-    <block wx:for="{{posts}}" wx:for-item="post" class="posts-scroll">
+    <block wx:for="{{posts}}" wx:for-item="post" wx:key="id" class="posts-scroll">
       <view class="post-container">
         <view class="title">
           {{post.title}}
         </view>
         <view class="vote-container">
-          <button class="upvote-button">
+          <button id="{{'upvote-button-' + post.id}}" class="upvote-button">
             <image class="upvote" mode="WidthFix" src="../../images/upvote.png"></image>
           </button>
           <view class="num-votes">{{post.votes}}</view>
-          <button class="downvote-button">
+          <button id="{{'down-button-' + post.id}}" class="downvote-button">
             <image class="downvote" mode="WidthFix" src="../../images/downvote.png"></image>
           </button>
         </view>
