@@ -23,7 +23,6 @@ Page({
         votes: -20
       }]
   },
-
   /**
    * Lifecycle function--Called when page load
    */
