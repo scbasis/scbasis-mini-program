@@ -3,3 +3,9 @@
 .back-button {
   margin-top: 5px;
 }
+
+.outer-post-container {
+  height: 7.5em;
+  margin: 0.5em;
+  margin-top: 60px;
+}

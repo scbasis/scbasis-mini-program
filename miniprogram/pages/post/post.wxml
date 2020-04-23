@@ -1,4 +1,3 @@
-<!--miniprogram/pages/post/post.wxml-->
 <view class="container">
   <header-bar>
     <button class="back-button" size="mini">
@@ -6,6 +5,9 @@
     </button>
   </header-bar>
 
-  
+  <view class="outer-post-container">
+    <!-- using first placeholder post from home.js -->
+    <post-block post="{{post}}"></post-block>
+  </view>
 
 </view>

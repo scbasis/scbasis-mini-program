@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "header-bar": "../../components/header-bar/header-bar",
-    "search": "../../components/search/search"
+    "search": "../../components/search/search",
+    "post-block": "../../components/post-block/post-block"
   }
 }
