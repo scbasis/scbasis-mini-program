@@ -5,7 +5,12 @@ Page({
    * Page initial data
    */
   data: {
-
+    post: { // using first placeholder post from home.js
+      title: "Interesting Title 1",
+      body: "Body text here- Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm",
+      votes: 420,
+      id: "0000"
+    }
   },
 
   /**

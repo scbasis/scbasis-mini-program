@@ -12,28 +12,11 @@
   </view>  
   
   <!-- <scroll-view scroll-y> -->
-    <block wx:for="{{posts}}" wx:for-item="post" wx:key="id" class="posts-scroll">
-      <view class="post-container">
-        <view class="title">
-          {{post.title}}
-        </view>
-        <view class="vote-container">
-          <button id="{{'upvote-button-' + post.id}}" class="upvote-button" bindtap="upv">
-            <image class="upvote" mode="WidthFix" src="../../images/upvote.png"></image>
-          </button>
-          <view class="num-votes">{{post.votes}}</view>
-          <button id="{{'downvote-button-' + post.id}}" class="downvote-button" bindtap="downv">
-            <image class="downvote" mode="WidthFix" src="../../images/downvote.png"></image>
-          </button>
-        </view>
-        <view class="body-container">
-          <view class="body-text">
-          {{post.body}}
-          </view>
-        </view>
-        <view class="clr"></view>
-      </view>
-    </block>
+  <block wx:for="{{posts}}" wx:for-item="post" wx:key="id" class="posts-scroll">
+    <view class="outer-post-container">
+      <post-block post="{{post}}"></post-block>
+    </view>
+  </block>
   <!-- </scroll-view> -->
 
 </view>

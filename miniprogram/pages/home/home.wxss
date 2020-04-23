@@ -29,51 +29,11 @@ button {
   letter-spacing: 0.2em;
 }
 
-.post-container {
-  background: white;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
-  position: relative;
+.outer-post-container {
+  height: 7.5em;
+  margin: 0.5em;
 }
 
-.title {
-  position: absolute;
-  top: -0.6em;
-  padding: 0.2em;
-  padding-left: 0.8em;
-  background: darkgreen;
-  width: 50%;
-  color: snow; 
-}
-
-.vote-container {
-  padding-top: 0.9em;
-  float: left;
-  width: 10%;
-}
-
-.upvote-button, .downvote-button, num-votes {
-  float: top;
-  height: 33%;
-}
-
-.upvote-button, .downvote-button {
-  display: inline;
-  min-height: 0;
-  /* border: 2px solid black; */
-  padding: 0;
-  margin: 0;
-  line-height: 1em;
-}
-
-.upvote, .downvote {
-  width: 1em;
-  height: 1em;
-}
-
-.body-text {
-  padding-top: 0.8em;
-  float: right;
-  width: 90%;
-}
+/* .posts-scroll {
+  height: 70px;
+} */
