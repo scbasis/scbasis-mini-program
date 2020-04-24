@@ -7,10 +7,41 @@ Page({
   data: {
     post: { // using first placeholder post from home.js
       title: "Interesting Title 1",
-      body: "Body text here- Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm",
+      body: "Body text here- Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm asldfkja iasudfh asiufh auishoqw q wofjh asdofiuh aushf weiourh sodif, sdog! asidf akdj fijawef.",
       votes: 420,
-      id: "0000"
-    }
+      id: "p0000"
+    },
+    comments: [{
+      text: "This is a comment",
+      votes: 11,
+      depth: 0,
+      id: "c0000",
+      children: [{
+        text: "This is a reply to a comment",
+        votes: 6,
+        depth: 1, 
+        id: "c0001",
+        children: [{
+          text: "This is the third",
+          votes: -1,
+          depth: 2, 
+          id: "c0002",
+          children: []
+        }]
+      }]
+    }, {
+      text: "Comment, but less popular",
+      votes: 6,
+      depth: 0, 
+      id: "c0003",
+      children: [{
+        text: "No one likes you",
+        votes: 12,
+        depth: 1,
+        id: "c0004",
+        children: []
+      }]
+    }]
   },
 
   /**

@@ -5,9 +5,36 @@
     </button>
   </header-bar>
 
-  <view class="outer-post-container">
-    <!-- using first placeholder post from home.js -->
-    <post-block post="{{post}}"></post-block>
+  <view class="main-container">
+  
+      <!-- using first placeholder post from home.js -->
+    <view class="post-container">
+      <view class="title">
+        {{post.title}}
+      </view>
+      <view class="vote-container">
+        <button id="{{'upvote-button-' + post.id}}" class="upvote-button">
+          <image class="upvote" mode="WidthFix" src="../../images/upvote.png"></image>
+        </button>
+        <view class="num-votes">{{post.votes}}</view>
+        <button id="{{'down-button-' + post.id}}" class="downvote-button">
+          <image class="downvote" mode="WidthFix" src="../../images/downvote.png"></image>
+        </button>
+      </view>
+      <view class="body-container">
+        <view class="body-text">
+        {{post.body}}
+        </view>
+      </view>
+      <view class="clr"></view>
+
+    </view>
+
+    <view class="comments-container">
+      <view class="comments-header">Comments</view>
+      <comment-block wx:for="{{comments}}" wx:key="id" wx:for-item="comment"
+      comment="{{comment}}"></comment-block>
+    </view>
   </view>
 
 </view>

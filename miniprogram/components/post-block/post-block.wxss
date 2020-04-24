@@ -23,9 +23,13 @@
   width: 10%;
 }
 
-.upvote-button, .downvote-button, num-votes {
+.upvote-button, .downvote-button, .num-votes {
   float: top;
   height: 33%;
+}
+
+.num-votes {
+  text-align: center;
 }
 
 .upvote-button, .downvote-button {

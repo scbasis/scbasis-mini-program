@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/post/post",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/post/post"
   ],
   "window": {
     "backgroundColor": "#EEEEEE",

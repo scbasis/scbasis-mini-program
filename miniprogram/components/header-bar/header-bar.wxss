@@ -5,4 +5,5 @@
   width: 100%;
   border-bottom: 3px lightgray solid;
   background-color: snow;
+  z-index: 100;
 }
