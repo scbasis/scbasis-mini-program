@@ -1,9 +1,14 @@
-.comment-container {
+.thread-container {
   float: right;
-  width: calc(100% - (var(--depth) * 20px));
+  width: calc(100% - 1.6em);
+  padding-left: 0.8em;
+  border-left: 1px gray solid;
+}
+
+.comment-container {
   background: white;
   border-radius: 5px;
-  padding: 1em;
+  padding: 0 1em;
   margin: 0.5em 0;
   min-height: 4em;
   box-sizing: border-box;
@@ -16,6 +21,7 @@
 
 .vote-container {
   display: block;
+  overflow: hidden;
 }
 
 .upvote-button, .downvote-button, .num-votes {
