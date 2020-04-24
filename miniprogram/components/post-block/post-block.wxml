@@ -7,7 +7,7 @@
       <image class="upvote" mode="WidthFix" src="../../images/upvote.png"></image>
     </button>
     <view class="num-votes">{{post.votes}}</view>
-    <button id="{{'down-button-' + post.id}}" class="downvote-button">
+    <button id="{{'downvote-button-' + post.id}}" class="downvote-button">
       <image class="downvote" mode="WidthFix" src="../../images/downvote.png"></image>
     </button>
   </view>
