@@ -1,24 +1,27 @@
-<view class="comment-container" style="--depth: {{comment.depth}};">
-  <view class="body-container">
-    <view class="body-text">
-    {{comment.text}}
+
+<view class="thread-container">
+  <view class="comment-container" style="--depth: {{comment.depth}};">
+    <view class="body-container">
+      <view class="body-text">
+      {{comment.text}}
+      </view>
+    </view>
+    <view class="vote-container">
+      <button id="{{'down-button-' + comment.id}}" class="downvote-button" size="mini">
+        <image class="downvote" mode="WidthFix" src="../../images/downvote.png"></image>
+      </button>
+      <view class="num-votes">
+        <view class="num">{{comment.votes}}</view>
+      </view>
+      <button id="{{'upvote-button-' + comment.id}}" class="upvote-button" size="mini">
+        <image class="upvote" mode="WidthFix" src="../../images/upvote.png"></image>
+      </button>
+      <view class="clr"></view>
     </view>
   </view>
-  <view class="vote-container">
-    <button id="{{'upvote-button-' + comment.id}}" class="upvote-button" size="mini">
-      <image class="upvote" mode="WidthFix" src="../../images/upvote.png"></image>
-    </button>
-    <view class="num-votes">
-      <view class="num">{{comment.votes}}</view>
-    </view>
-    <button id="{{'down-button-' + comment.id}}" class="downvote-button" size="mini">
-      <image class="downvote" mode="WidthFix" src="../../images/downvote.png"></image>
-    </button>
-    <view class="clr"></view>
-  </view>
+
+  <view class="clr"></view>
+
+  <comment-block wx:for="{{comment.children}}" wx:key="id" wx:for-item="child" 
+  comment="{{child}}"></comment-block>
 </view>
-
-<view class="clr"></view>
-
-<comment-block wx:for="{{comment.children}}" wx:key="id" wx:for-item="child" 
-comment="{{child}}"></comment-block>
