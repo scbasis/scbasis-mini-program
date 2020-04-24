@@ -9,7 +9,9 @@ Page({
       title: "Interesting Title 1",
       body: "Body text here- Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm",
       votes: 420,
-      id: "0000"
+      id: "0000",
+      upvoted: "false",
+      downvoted: "false"
     }
   },
 
