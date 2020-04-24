@@ -1,7 +1,7 @@
 .post-container {
   background: white;
   border-radius: 5px;
-  padding: 1em;
+  padding: 0.5em;
   position: relative;
   height: 100%;
   box-sizing: border-box;
@@ -18,14 +18,14 @@
 }
 
 .vote-container {
-  padding-top: 0.9em;
+  padding-top: 1.4em;
   float: left;
   width: 10%;
 }
 
 .upvote-button, .downvote-button, .num-votes {
-  float: top;
-  height: 33%;
+  width: 100%;
+  /* border: 1px solid black; */
 }
 
 .num-votes {
@@ -33,12 +33,14 @@
 }
 
 .upvote-button, .downvote-button {
-  display: inline;
+  display: block;
+  width: 100% !important;
   min-height: 0;
-  /* border: 2px solid black; */
-  padding: 0;
-  margin: 0;
-  line-height: 1em;
+  font-size: 13px;
+  padding: 0 !important;
+  margin: auto;
+  margin-bottom: -5px;
+  line-height: 1em !important;
 }
 
 .upvote, .downvote {
@@ -47,7 +49,7 @@
 }
 
 .body-text {
-  padding-top: 0.8em;
+  padding-top: 1.4em;
   float: right;
   width: 90%;
 }
