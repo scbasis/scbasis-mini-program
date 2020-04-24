@@ -14,14 +14,7 @@ Component({
    * Component initial data
    */
   data: { 
-    posts: {
-      title: "Interesting Title 1",
-      body: "Body text here- Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm",
-      votes: 420,
-      id: "0000",
-      upvoted: false,
-      downvoted: false
-  }
+
   },
 
   /**
@@ -29,38 +22,46 @@ Component({
    */
   methods: {
     upv: function(event){
-      if (this.data.posts.upvoted){
-        this.data.posts.votes--;
-        this.data.posts.upvoted = false;
-      }       
-      else {
-        this.data.posts.votes++;
-        this.data.posts.upvoted = true;
-        if (this.data.posts.downvoted){
-          this.data.posts.downvoted = false;
-          this.data.posts.votes++;
-        }      
-      }
+        if ('upvote-button-' + this.properties.post.id == event.currentTarget.id){
+          if (this.properties.post.upvoted){
+            this.properties.post.votes--;
+            this.properties.post.upvoted = false;
+          }
+          else {
+            this.properties.post.votes++;
+            this.properties.post.upvoted = true;
+            if (this.properties.post.downvoted){
+              this.properties.post.downvoted = false;
+              this.properties.post.votes++;
+            }
+          }
+        }
+      
       this.setData({
-        posts: this.data.posts
+        post: this.properties.post 
       })
+      console.log(this.properties.post);
+    },
+    downv: function(event){
+        if ('downvote-button-' + this.properties.post.id == event.currentTarget.id){
+          if (this.properties.post.downvoted){
+            this.properties.post.votes++
+            this.properties.post.downvoted = false;
+          }
+          else {
+            this.properties.post.votes--;
+            this.properties.post.downvoted = true;
+            if (this.properties.post.upvoted){
+              this.properties.post.upvoted = false;
+              this.properties.post.votes--;
+            }
+          }
+        }
+      
+      this.setData({
+        post: this.properties.post
+      })
+      console.log(this.properties.post);
     }
-  },
-  downv: function(event){
-    if (this.data.posts.downvoted){
-      this.data.posts.votes++;
-      this.data.posts.downvoted = false;
-    }       
-    else {
-      this.data.posts.votes--;
-      this.data.posts.downvoted = true;
-      if (this.data.posts.upvoted){
-        this.data.posts.upvoted = false;
-        this.data.posts.votes--;
-      }      
-    }
-    this.setData({
-      posts: this.data.posts
-    })
   }
 })

@@ -35,49 +35,6 @@ Page({
         upvoted: false,
         downvoted: false
       }]
-  }, upv: function(event){
-    for (let i = 0; i < this.data.posts.length; i++){
-      if ('upvote-button-' + this.data.posts[i].id == event.currentTarget.id){
-        if (this.data.posts[i].upvoted){
-          this.data.posts[i].votes--;
-          this.data.posts[i].upvoted = false;
-        }
-        else {
-          this.data.posts[i].votes++;
-          this.data.posts[i].upvoted = true;
-          if (this.data.posts[i].downvoted){
-            this.data.posts[i].downvoted = false;
-            this.data.posts[i].votes++;
-          }
-        }
-        break;
-      }
-    }
-    this.setData({
-      posts: this.data.posts
-    })
-  },
-  downv: function(event){
-    for (let i = 0; i < this.data.posts.length; i++){
-      if ('downvote-button-' + this.data.posts[i].id == event.currentTarget.id){
-        if (this.data.posts[i].downvoted){
-          this.data.posts[i].votes++
-          this.data.posts[i].downvoted = false;
-        }
-        else {
-          this.data.posts[i].votes--;
-          this.data.posts[i].downvoted = true;
-          if (this.data.posts[i].upvoted){
-            this.data.posts[i].upvoted = false;
-            this.data.posts[i].votes--;
-          }
-        }
-        break;
-      }
-    }
-    this.setData({
-      posts: this.data.posts
-    })
   },
   /**
    * Lifecycle function--Called when page load
