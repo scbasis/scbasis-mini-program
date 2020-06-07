@@ -63,8 +63,14 @@
   line-height: 1em;
 }
 
-.nav-button .nav-image {
-  width: 20px;
+.nav-button{
+   width: 30px;
   height: 20px;
+  margin-top: 0.5em;
+}
+.nav-image {
+  width: 25px;
+  height: 20px;
+  padding-right:0.2em;
   margin-top: 0.5em;
 }

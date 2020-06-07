@@ -4,7 +4,7 @@
     "pages/post/post"
   ],
   "window": {
-    "backgroundColor": "#EEEEEE",
+    "backgroundColor": "#EFF0F2",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "SC BASIS",

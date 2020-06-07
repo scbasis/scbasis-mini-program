@@ -2,6 +2,7 @@
 
 .back-button {
   margin-top: 5px;
+  color: #47624a;
 }
 
 .main-container {
@@ -24,14 +25,14 @@
   top: -0.6em;
   padding: 0.2em;
   padding-left: 0.8em;
-  background: darkgreen;
+  background:#47624a;
   width: 50%;
   color: snow; 
 }
 
 .vote-container {
   padding-top: 0.9em;
-  float: left;
+  float:left;
   width: 10%;
 }
 
@@ -40,11 +41,14 @@
   height: 33%;
 }
 
+.num-votes {
+  padding-bottom: 0.4em;
+}
 .upvote-button, .downvote-button {
   display: inline;
   min-height: 0;
   /* border: 2px solid black; */
-  padding: 0;
+  padding: 0.45em;
   margin: 0;
   line-height: 1em;
 }
@@ -57,7 +61,9 @@
 .body-text {
   padding-top: 0.8em;
   float: right;
-  width: 90%;
+  width: 80%;
+  font-size: 13px;
+  color:#000;
 }
 
 .comments-container {
