@@ -1,46 +1,28 @@
 // miniprogram/pages/home/home.js
-Page({
 
+Page({
   /**
    * Page initial data
    */
   data: {
-    posts: [{
-      title: "Interesting Title 1",
-      body: "Body text here- Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm",
-      votes: 420,
-      id: "p0000",
-      upvoted: false,
-      downvoted: false
-    }, {
-        title: "Interesting Title 2",
-        body: "More body text here- asdjfha aldsfjasdlf asfj sidjjkasg asfdulhowier",
-        votes: 69,
-        id: "p0001",
-        upvoted: false,
-        downvoted: false
-      }, {
-        title: "Interesting Title 3",
-        body: "More body text here- asdjfha aldsfjasdlf asfj sidjjkasg asfdulhowier",
-        votes: 0,
-        id: "p0002",
-        id: "0002",
-        upvoted: false,
-        downvoted: false
-      },{
-        title: "Interesting Title 4",
-        body: "More body text here- asdjfha aldsadjjkasg asfdulhowier",
-        votes: -20,
-        id: "p0003",
-        upvoted: false,
-        downvoted: false
-      }]
+    loadnum: 0,
+    posts: []
   },
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    const db = wx.cloud.database()
+    db.collection('Posts').skip(this.data.loadnum).limit(20).get({
+      success: function(res){
+        console.log(res.data)
+        this.data.posts = this.data.posts + res.data
+        console.log(res.data)
+        console.log(this.data.loadnum)
+        console.log(this.data.posts.data)
+      }
+    })
+    this.data.loadnum = this.data.loadnum + 20
   },
 
   /**
@@ -82,7 +64,17 @@ Page({
    * Called when page reach bottom
    */
   onReachBottom: function () {
-
+    const db = wx.cloud.database()
+    exports.main = async (event, context) => {
+      db.collection('posts').skip(loadnum).limit(20).get({
+        success: function(res){
+          this.data.posts.push(res.data)
+          console.log(res.data)
+          console.log(posts.data)
+        }
+      })
+      loadnum = loadnum + 20
+    }
   },
 
   /**
