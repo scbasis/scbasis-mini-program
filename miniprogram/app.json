@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/new post/new post",
     "pages/home/home",
     "pages/post/post"
   ],
