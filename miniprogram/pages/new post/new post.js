@@ -1,28 +1,18 @@
-// miniprogram/pages/home/home.js
-
+// miniprogram/pages/new post/new post.js
 Page({
+
   /**
    * Page initial data
    */
   data: {
-    loadnum: 0,
-    posts: []
+
   },
+
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    const db = wx.cloud.database()
-    db.collection('Posts').skip(this.data.loadnum).limit(20).get({
-      success: function(res){
-        console.log(res.data)
-        this.data.posts = this.data.posts + res.data
-        console.log(res.data)
-        console.log(this.data.loadnum)
-        console.log(this.data.posts.data)
-      }
-    })
-    this.data.loadnum = this.data.loadnum + 20
+
   },
 
   /**
@@ -64,17 +54,7 @@ Page({
    * Called when page reach bottom
    */
   onReachBottom: function () {
-    const db = wx.cloud.database()
-    exports.main = async (event, context) => {
-      db.collection('posts').skip(loadnum).limit(20).get({
-        success: function(res){
-          this.data.posts.push(res.data)
-          console.log(res.data)
-          console.log(posts.data)
-        }
-      })
-      loadnum = loadnum + 20
-    }
+
   },
 
   /**
