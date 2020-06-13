@@ -1,0 +1,61 @@
+.back-button {
+  margin-top: 5px;
+  color: #47624a;
+}
+
+.main-container {
+  margin: 1em;
+  margin-top: 55px;
+}
+
+.post-container {
+  background: white;
+  margin-top: 10%;
+  border-radius: 5px;
+  padding: 0.5em;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.title {
+  padding: 0.2em;
+  box-sizing: border-box;
+  background: #47624a;
+  width: 100%;
+  color: snow; 
+}
+
+.title-textarea {
+  padding: 0.3em 0.6em;
+  vertical-align: middle;
+  width: 100%;
+  height: 5em;
+  box-sizing: border-box;
+}
+
+.title-placeholder {
+  color: lightgrey;
+}
+
+.body-textarea{
+  padding-top: 1.4em;
+  padding-left: 0.5em;
+  padding-right:0.5em;
+  width: 100%;
+  box-sizing: border-box;
+  height: 25em;
+  font-size: 13px;
+  font-family: inherit;
+  color:black;
+}
+
+.camera-button, .picture-button, .emoji-button {
+  width: 1.5em;
+  padding: 0.2em 0.5em !important;
+}
+
+.camera-button image, .picture-button image, .emoji-button image {
+  width: 1.5em;
+  vertical-align: middle;
+}

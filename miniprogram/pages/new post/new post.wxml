@@ -1,0 +1,38 @@
+<view class="container">
+  <header-bar>
+    <button class="back-button" size="mini">
+      Back
+    </button>
+  </header-bar>
+
+  <view class="main-container">
+    <view class="post-container">
+      <form class="form">
+        <view class="title">
+          <textarea class="title-textarea" placeholder="Interesting title..." 
+            placeholder-class="title-placeholder"></textarea>
+        </view>
+        
+        <view class="body-container">
+          <textarea class="body-textarea" placeholder="Write something interesting here..."
+            placeholder-class="body-placeholder" maxlength="2000"></textarea>
+        </view>
+
+        <view class="footer">
+          <button size="mini" class="camera-button">
+            <image src="../../images/camera.png" mode="widthFix"></image>
+          </button>
+          <button size="mini" class="picture-button">
+            <image src="../../images/picture.png" mode="widthFix"></image>
+          </button>
+          <button size="mini" class="emoji-button">
+            <image src="../../images/emoji.png" mode="widthFix"></image>
+          </button>
+        </view>
+      </form>
+    </view>
+
+  </view>
+
+</view>
+

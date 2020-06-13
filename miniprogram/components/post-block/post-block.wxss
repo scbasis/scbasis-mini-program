@@ -12,7 +12,7 @@
   top: -0.6em;
   padding: 0.2em;
   padding-left: 0.8em;
-  background: darkgreen;
+  background: #47624a;
   width: 50%;
   color: snow; 
 }
@@ -26,10 +26,12 @@
 .upvote-button, .downvote-button, .num-votes {
   width: 100%;
   /* border: 1px solid black; */
+  color:#e8a5a6
 }
 
 .num-votes {
   text-align: center;
+  color:#47624a;
 }
 
 .upvote-button, .downvote-button {
@@ -51,5 +53,8 @@
 .body-text {
   padding-top: 1.4em;
   float: right;
-  width: 90%;
+  width: 80%;
+  font-size: 13px;
+  font-family: inherit;
+  color:black;
 }

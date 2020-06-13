@@ -1,10 +1,11 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/post/post"
+    "pages/post/post",
+    "pages/new post/new post"
   ],
   "window": {
-    "backgroundColor": "#EEEEEE",
+    "backgroundColor": "#EFF0F2",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "SC BASIS",
