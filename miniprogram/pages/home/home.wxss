@@ -41,6 +41,8 @@ button {
 .button-container-text{
   font-size:11px;
   padding-bottom: 4px;
+  padding-left: 1em !important;
+  padding-right: 1em !important;
 }
 
 
