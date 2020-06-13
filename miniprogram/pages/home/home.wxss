@@ -30,6 +30,20 @@ button {
   color: #47624a;
 }
 
+.button-container {
+  width:35%;
+  background:#47624a;
+  float:right;
+  color:#fff;
+  margin-right:10px;
+} 
+
+.button-container-text{
+  font-size:11px;
+  padding-bottom: 4px;
+}
+
+
 .outer-post-container {
   height: 7.5em;
   margin: 0.5em;
