@@ -15,15 +15,16 @@ Page({
    */
   onLoad: function (options) {
     const db = wx.cloud.database('scbasiscloud')
+    var that = this
     db.collection('posts').skip(this.data.loadnuml).limit(20).get({
-      success: function(res){        
+      success: function(res){     
         console.log(res.data)
-        this.setData({
-          posts: res
+        that.setData({
+          posts: res.data
         })
+        console.log(that.data.posts)
       }
     })
-    console.log(this.data.posts)
     appInstance.loadnum = this.data.loadnuml + 20
     console.log(appInstance.loadnum)
   },
@@ -67,15 +68,19 @@ Page({
    * Called when page reach bottom
    */
   onReachBottom: function () {
-    const db = wx.cloud.database({env:'scbasiscloud'})
-    db.collection('posts').skip(this.data.loadnum).limit(20).get({
-      success: res =>{
+    const db = wx.cloud.database('scbasiscloud')
+    var that = this
+    db.collection('posts').skip(this.data.loadnuml).limit(20).get({
+      success: function(res){     
         console.log(res.data)
-        this.setData({
-          posts: posts + res.data
+        that.setData({
+          posts: res.data
         })
+        console.log(that.data.posts)
       }
     })
+    appInstance.loadnum = this.data.loadnuml + 20
+    console.log(appInstance.loadnum)
   },
 
   /**
