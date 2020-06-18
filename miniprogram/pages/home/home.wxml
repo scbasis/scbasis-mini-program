@@ -9,9 +9,11 @@
       <view class="h1">Discuss, Relate & Share</view>
       <view class="h2">Discussion threads on topics of your choice!</view>
     </view>
+    <!--<filter button> -->
     <view class="button-container">
       <button class="button-container-text">Filter by ⬇</button>
     </view>
+    <!--</filter button> -->
   </view>  
   
   <!-- <scroll-view scroll-y> -->

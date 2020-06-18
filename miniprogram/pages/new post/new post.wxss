@@ -1,6 +1,25 @@
-.back-button {
+.navigatorBtn {
   margin-top: 5px;
-  color: #47624a;
+  margin-left: 8px;
+  background: #47624a;
+  color:#fff;
+  border-width:thin;
+  border-color: #47624a;
+  width: 15%;
+  padding:4.5px;
+  text-align: center;
+}
+
+.navigatorBtn:active {
+  margin-top: 5px;
+  margin-left: 8px;
+  background:#fff;
+  color:#47624a;
+  border-width:thin;
+  border-color: #47624a;
+  width: 15%;
+  padding:4.5px;
+  text-align: center;
 }
 
 .main-container {
