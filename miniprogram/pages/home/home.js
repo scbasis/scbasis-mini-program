@@ -1,28 +1,31 @@
 // miniprogram/pages/home/home.js
 
+const appInstance = getApp()
+
 Page({
   /**
    * Page initial data
    */
   data: {
-    loadnum: 0,
+    loadnuml: appInstance.loadnum,
     posts: []
   },
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    const db = wx.cloud.database()
-    db.collection('Posts').skip(this.data.loadnum).limit(20).get({
-      success: function(res){
+    const db = wx.cloud.database('scbasiscloud')
+    db.collection('posts').skip(this.data.loadnuml).limit(20).get({
+      success: function(res){        
         console.log(res.data)
-        this.data.posts = this.data.posts + res.data
-        console.log(res.data)
-        console.log(this.data.loadnum)
-        console.log(this.data.posts.data)
+        this.setData({
+          posts: res
+        })
       }
     })
-    this.data.loadnum = this.data.loadnum + 20
+    console.log(this.data.posts)
+    appInstance.loadnum = this.data.loadnuml + 20
+    console.log(appInstance.loadnum)
   },
 
   /**
@@ -64,17 +67,15 @@ Page({
    * Called when page reach bottom
    */
   onReachBottom: function () {
-    const db = wx.cloud.database()
-    exports.main = async (event, context) => {
-      db.collection('posts').skip(loadnum).limit(20).get({
-        success: function(res){
-          this.data.posts.push(res.data)
-          console.log(res.data)
-          console.log(posts.data)
-        }
-      })
-      loadnum = loadnum + 20
-    }
+    const db = wx.cloud.database({env:'scbasiscloud'})
+    db.collection('posts').skip(this.data.loadnum).limit(20).get({
+      success: res =>{
+        console.log(res.data)
+        this.setData({
+          posts: posts + res.data
+        })
+      }
+    })
   },
 
   /**
