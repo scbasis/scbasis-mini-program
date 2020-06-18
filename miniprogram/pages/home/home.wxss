@@ -31,7 +31,7 @@ button {
 }
 
 .button-container {
-  width:35%;
+  width:31%;
   background:#47624a;
   float:right;
   color:#fff;
@@ -39,12 +39,19 @@ button {
 } 
 
 .button-container-text{
-  font-size:11px;
-  padding-bottom: 4px;
+  font-size:12px;
+  padding-bottom: 5px;
   padding-left: 1em !important;
   padding-right: 1em !important;
 }
 
+.button-container:hover {
+  width:31%;
+  background:#000;
+  float:right;
+  color:#fff;
+  margin-right:10px;
+} 
 
 .outer-post-container {
   height: 7.5em;
