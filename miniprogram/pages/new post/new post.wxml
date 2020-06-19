@@ -1,6 +1,10 @@
 <view class="container">
   <header-bar>
-    <navigator url="miniprogram/pages/home/home" hover-class="navigator-hover" class="navigatorBtn" open-type="redirect">Back</navigator>
+    <button class="back-button" size="mini">
+      <p class="buttonText">
+      Back
+      </p>
+    </button>
   </header-bar>
 
   <view class="main-container">

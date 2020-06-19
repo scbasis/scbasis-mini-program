@@ -5,16 +5,17 @@
   margin-left: 8px;
   background: #47624a;
   color:#fff;
-  border-width:thin;
-  padding-left: 5px !important;
+  border-width:thick;
+  border-color:#47624a;
+  text-align:center;
 }
 
 .back-button:active {
-  margin-top: 5px;
   background: #fff;
   color:#47624a;
-  border-width:thin;
+  border-width:4rpx;
   border-color:#47624a;
+  text-align:center;
 }
 
 .buttonText {

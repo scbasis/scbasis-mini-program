@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/new post/new post",
     "pages/post/post",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/new post/new post"
   ],
   "window": {
     "backgroundColor": "#EFF0F2",
