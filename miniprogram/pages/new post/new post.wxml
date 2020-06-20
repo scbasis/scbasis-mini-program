@@ -1,19 +1,19 @@
 <view class="container">
   <header-bar>
-    <navigator url="miniprogram/pages/home/home" hover-class="navigator-hover" class="navigatorBtn" open-type="redirect">Back</navigator>
+    <navigator url="../home/home" hover-class="navigator-hover" class="navigatorBtn" open-type="redirect">Back</navigator>
   </header-bar>
 
   <view class="main-container">
     <view class="post-container">
       <form class="form">
         <view class="title">
-          <textarea class="title-textarea" placeholder="Interesting title..." 
-            placeholder-class="title-placeholder"></textarea>
+          <textarea type="text" class="title-textarea" placeholder="Interesting title..." 
+            placeholder-class="title-placeholder" bindinput="getTitleData"></textarea>
         </view>
         
         <view class="body-container">
-          <textarea class="body-textarea" placeholder="Write something interesting here..."
-            placeholder-class="body-placeholder" maxlength="2000"></textarea>
+          <textarea type="text" class="body-textarea" placeholder="Write something interesting here..."
+            placeholder-class="body-placeholder" maxlength="2000" bindinput="getContentData"></textarea>
         </view>
 
         <view class="footer">
