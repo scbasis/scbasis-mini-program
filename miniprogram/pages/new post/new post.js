@@ -1,4 +1,6 @@
 // miniprogram/pages/new post/new post.js
+const appInstance = getApp()
+
 Page({
 
   /**
