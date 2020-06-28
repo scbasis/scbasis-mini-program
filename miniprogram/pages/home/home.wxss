@@ -42,7 +42,7 @@ button {
   font-size:12px;
   padding-bottom: 5px;
   padding-left: 1em !important;
-  padding-right: 1fem !important;
+  padding-right: 1em !important;
 }
 
 .button-container:hover {

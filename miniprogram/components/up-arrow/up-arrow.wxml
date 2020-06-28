@@ -1,0 +1,4 @@
+<!--components/up-arrow/up-arrow.wxml-->
+ <button id="{{'upvote-button-' + post.id}}" class="upvote-button" size="mini" bindtap="upv">
+  <image class="upvote" mode="WidthFix" src="../../images/pinkUpArrow.png"></image>
+</button>

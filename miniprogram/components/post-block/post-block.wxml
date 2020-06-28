@@ -3,13 +3,9 @@
     {{post.title}}
   </view>
   <view class="vote-container">
-    <button id="{{'upvote-button-' + post.id}}" class="upvote-button" size="mini" bindtap="upv">
-      <image class="upvote" mode="WidthFix" src="../../images/pinkUpArrow.png"></image>
-    </button>
+    <up-arrow post="{{post}}"></up-arrow>
     <view class="num-votes">{{post.votes}}</view>
-    <button id="{{'downvote-button-' + post.id}}" class="downvote-button" size="mini" bindtap="downv">
-      <image class="downvote" mode="WidthFix" src="../../images/pinkDownArrow.png"></image>
-    </button>
+    <down-arrow post="{{post}}"></down-arrow>
   </view>
   <view class="body-container">
     <view class="body-text">

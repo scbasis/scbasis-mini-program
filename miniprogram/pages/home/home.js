@@ -7,7 +7,16 @@ Page({
    * Page initial data
    */
   data: {
-    posts: []
+    posts: [
+      {
+        id: '0001',
+        title: 'placeholder',
+        body: 'placeholder',
+        votes: 1,
+        upvoted: false,
+        downvoted: false
+      }
+    ]
   },
 
   loadMore: function(){
