@@ -1,6 +1,6 @@
 /* miniprogram/pages/post/post.wxss */
 
-.back-button {
+.backButton {
   margin-top: 5px;
   margin-left: 8px;
   background: #47624a;
@@ -10,7 +10,7 @@
   text-align:center;
 }
 
-.back-button:active {
+.backButton:active {
   background: #fff;
   color:#47624a;
   border-width:4rpx;
@@ -21,6 +21,7 @@
 .buttonText {
   margin-left:5px;
 }
+
 .main-container {
   margin: 1em;
   margin-top: 55px;

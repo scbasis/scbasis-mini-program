@@ -1,0 +1,145 @@
+<!--miniprogram/pages/category/category.wxml-->
+
+<!--headerbar-->
+<view class="container">
+  <header-bar>
+    <button class="backButton" size="mini">
+      <p class="buttonText">
+        Back
+      </p>
+    </button>
+  </header-bar>
+</view>
+
+<!--Category Names that are decided by the people who write the new posts. Need to add a link to a js function that turns the wxss "display" of tableContainer- + "id" into show-->
+<view class="catHeadrContainer">
+  <view class="layoutHorizontal">
+    <view bindtap="showDiscussion(1)">
+      <label class="catTitle">
+        Category Name 1
+      </label>
+    </view>
+    <button class="btnNew" size="mini">
+      New
+    </button>
+
+  </view>
+</view>
+
+<!--add function of finding the hottest 3 discussions in the category and adding a link-->
+
+<view id="cat_1" class="table" style="display:none;">
+  <view class="table-tr">
+    <view class="table-th">
+      Discussion Name
+    </view>
+    <view class="table-th">
+      Author
+    </view>
+    <view class="table-th">
+      Views
+    </view>
+  </view>
+
+  <view class="table-tr">
+    <view class="table-td">
+      testDiscussion
+    </view>
+    <view class="table-td">
+      testAuthor
+    </view>
+    <view class="table-td">
+      testViews
+    </view>
+  </view>
+
+  <view class="table-tr">
+    <view class="table-td">
+      testDiscussion
+    </view>
+    <view class="table-td">
+      testAuthor
+    </view>
+    <view class="table-td">
+      testViews
+    </view>
+  </view>
+
+  <view class="table-tr">
+    <view class="table-td">
+      testDiscussion
+    </view>
+    <view class="table-td">
+      testAuthor
+    </view>
+    <view class="table-td">
+      testViews
+    </view>
+  </view>
+</view>
+
+
+
+<view class="catHeadrContainer">
+  <view class="layoutHorizontal">
+    <view bindtap="showDiscussion(2)">
+      <label class="catTitle">
+        Category Name 2
+      </label>
+    </view>
+    <button class="btnNew" size="mini">
+      New
+    </button>
+  </view>
+</view>
+
+
+<view id="cat_2" class="table" style="display:none;">
+  <view class="table-tr">
+    <view class="table-th">
+      Discussion Name
+    </view>
+    <view class="table-th">
+      Author
+    </view>
+    <view class="table-th">
+      Views
+    </view>
+  </view>
+
+  <view class="table-tr">
+    <view class="table-td">
+      testDiscussion
+    </view>
+    <view class="table-td">
+      testAuthor
+    </view>
+    <view class="table-td">
+      testViews
+    </view>
+  </view>
+
+  <view class="table-tr">
+    <view class="table-td">
+      testDiscussion
+    </view>
+    <view class="table-td">
+      testAuthor
+    </view>
+    <view class="table-td">
+      testViews
+    </view>
+  </view>
+
+  <view class="table-tr">
+    <view class="table-td">
+      testDiscussion
+    </view>
+    <view class="table-td">
+      testAuthor
+    </view>
+    <view class="table-td">
+      testViews
+    </view>
+  </view>
+</view>

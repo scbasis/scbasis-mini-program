@@ -1,6 +1,6 @@
 <view class="container">
   <header-bar>
-    <button class="back-button" size="mini">
+    <button class="backButton" size="mini">
       <p class="buttonText">
       Back
       </p>

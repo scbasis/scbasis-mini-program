@@ -1,0 +1,101 @@
+/* miniprogram/pages/category/category.wxss */
+
+.backButton {
+  margin-top: 5px;
+  margin-left: 8px;
+  background: #47624a;
+  color: #fff;
+  border-width: thin;
+  padding-left: 5px !important;
+}
+
+.backButton:active {
+  margin-top: 5px;
+  background: #fff;
+  color: #47624a;
+  border-width: thin;
+  border-color: #47624a;
+}
+
+.buttonText {
+  margin-left: 5px;
+}
+
+.catHeadrContainer {
+  background: white;
+  border-radius: 5px;
+  padding: 0.5em;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  margin-top: 17%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.layoutHorizontal {
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+}
+
+.catTitle {
+  flex: 1;
+  color: #47624a;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.btnNew {
+  background: #47624a;
+  color: #fff;
+  position:relative;
+  align-items: right;
+
+}
+
+.btnNew:active {
+  background: #fff;
+  color: #47624a;
+}
+
+.table, .table div {
+  margin: 0 auto;
+  padding:10px;
+}
+
+.table {
+  display: table;
+  width: 90%;
+  margin:10px;
+}
+
+.table-tr {
+  display: table-row;
+}
+
+.table-th {
+  display: table-cell; 
+  border: none;
+  font-size:10px;
+  text-align: left;
+  margin-bottom:8px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  color:rgb(161, 159, 159);
+}
+
+.table-td {
+  background: white;
+  color:#47624a;
+  display: table-cell;
+  vertical-align: middle;
+  padding-right:4px;
+  padding-left:10px;
+  padding-top:4px;
+  padding-bottom:4px;
+  font-size:10px;
+  text-align: left;
+  margin:10px;
+}
