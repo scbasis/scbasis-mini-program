@@ -66,6 +66,18 @@
   color:black;
 }
 
+.footer {
+
+}
+
+.footer-left {
+  float: left;
+}
+
+.footer-right {
+  float: right;
+}
+
 .camera-button, .picture-button, .emoji-button {
   width: 1.5em;
   padding: 0.2em 0.5em !important;
@@ -74,4 +86,9 @@
 .camera-button image, .picture-button image, .emoji-button image {
   width: 1.5em;
   vertical-align: middle;
+}
+
+.submit-button {
+  border: green 2px solid;
+  border-radius: 0.5em;
 }

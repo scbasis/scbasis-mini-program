@@ -7,25 +7,39 @@ Page({
    * Page initial data
    */
   data: {
-    loadnuml: appInstance.loadnum,
-    posts: []
+    posts: [
+      {
+        id: '0001',
+        title: 'placeholder',
+        body: 'placeholder',
+        votes: 1,
+        upvoted: false,
+        downvoted: false
+      }
+    ]
+  },
+
+  loadMore: function(){
+    const db = wx.cloud.database('scbasiscloud')
+    var that = this
+    var loadnuml = appInstance.loadnum
+    db.collection('posts').skip(loadnuml).limit(20).get({
+      success: function(res){     
+        console.log(res.data)
+        that.setData({
+          posts: that.data.posts.concat(res.data)
+        })
+        console.log(that.data.posts)
+      }
+    })
+    appInstance.loadnum = loadnuml + 20
+    console.log(appInstance.loadnum)
   },
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    const db = wx.cloud.database('scbasiscloud')
-    db.collection('posts').skip(this.data.loadnuml).limit(20).get({
-      success: function(res){        
-        console.log(res.data)
-        this.setData({
-          posts: res
-        })
-      }
-    })
-    console.log(this.data.posts)
-    appInstance.loadnum = this.data.loadnuml + 20
-    console.log(appInstance.loadnum)
+    loadMore()
   },
 
   /**
@@ -67,15 +81,7 @@ Page({
    * Called when page reach bottom
    */
   onReachBottom: function () {
-    const db = wx.cloud.database({env:'scbasiscloud'})
-    db.collection('posts').skip(this.data.loadnum).limit(20).get({
-      success: res =>{
-        console.log(res.data)
-        this.setData({
-          posts: posts + res.data
-        })
-      }
-    })
+    loadMore()
   },
 
   /**

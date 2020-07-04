@@ -1,0 +1,21 @@
+.upvote-button, .downvote-button, .num-votes {
+  width: 100%;
+  /* border: 1px solid black; */
+  color:#e8a5a6
+}
+
+.upvote-button, .downvote-button {
+  display: block;
+  width: 100% !important;
+  min-height: 0;
+  font-size: 13px;
+  padding: 0 !important;
+  margin: auto;
+  margin-bottom: -5px;
+  line-height: 1em !important;
+}
+
+.upvote, .downvote {
+  width: 1em;
+  height: 1em;
+}
