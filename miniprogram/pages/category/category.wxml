@@ -28,7 +28,7 @@
 
 <!--add function of finding the hottest 3 discussions in the category and adding a link-->
 
-<view id="cat_1" class="table" style="display:none;">
+<view id="cat_1" class="table">
   <view class="table-tr">
     <view class="table-th">
       Discussion Name
@@ -94,7 +94,7 @@
 </view>
 
 
-<view id="cat_2" class="table" style="display:none;">
+<view id="cat_2" class="table">
   <view class="table-tr">
     <view class="table-th">
       Discussion Name
