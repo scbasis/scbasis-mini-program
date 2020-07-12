@@ -30,8 +30,11 @@ Jul 11
 - Home design - Sandra & Anthea
 
 Jul 18
-- Post & New post design
-- Home front 
+- Post & New post design + New post icons redesign - Anthea & Sam
+- Home front & fixing filter button - Kenny (& Anthea)
+- Oliver: Home page, click on post -> Post page
+    - Post upvoting - changing number displayed, cloud function
+
 
 Jul 25
 - Categories list design
