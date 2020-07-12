@@ -1,7 +1,38 @@
 <!--miniprogram/pages/home/home.wxml-->
 <view class="container">
   <header-bar>
-    <search></search>
+    <!--profilepic-->
+    <ul>
+      <li>
+        <view class="userInfo">
+          <!--<button wx:if="{{!hasUserInfo && canIUse}}" class="getusernicknameButton" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+          <block wx:else>*/-->
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <!--</block>-->
+        </view>
+      </li>
+      <li>
+        <!--searchBox+searchButton-->
+        <view class="search-container">
+          <input type="search" placeholder="Search..."></input>
+          <button >
+            <icon type="search"></icon>
+          </button>
+        </view>
+      </li>
+
+      <li>
+        <button size="mini">
+        temp
+        </button>
+      </li>
+      <li>
+        <button size="mini">
+        temp
+        </button>
+      </li>
+    </ul>
+
   </header-bar>
 
   <view class="header">
@@ -14,8 +45,8 @@
       <button class="button-container-text">Filter by ⬇</button>
     </view>
     <!--</filter button> -->
-  </view>  
-  
+  </view>
+
   <!-- <scroll-view scroll-y> -->
   <block wx:for="{{posts}}" wx:for-item="post" wx:key="id" class="posts-scroll">
     <view class="outer-post-container">

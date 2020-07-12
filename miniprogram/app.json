@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/home/home",
+    "pages/post/post",
     "pages/category/category",
-    "pages/new post/new post",
-	"pages/home/home",
-    "pages/post/post"
+    "pages/new post/new post"
   ],
   "window": {
     "backgroundColor": "#EFF0F2",

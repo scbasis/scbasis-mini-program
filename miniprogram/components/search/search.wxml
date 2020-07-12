@@ -1,14 +1,7 @@
-<!--components/search-bar.wxml-->
-<view class="flex-wrp">
-  <view class="spacer-1"></view>
-  <view class="flex-item search-container">
-    <form>
-      <input placeholder="Search topics..."></input>
-      <button><icon class="icon" type="search"></icon></button>
-    </form>
-  </view>
-  
-  <button class="flex-item nav-button">
-    <image class="nav-image" mode="WidthFix" src="../../images/nav.png"></image>
+<!--searchBox+searchButton-->
+<view class="search-container">
+  <input type="search" placeholder="Search"></input>
+  <button>
+    <icon class="iconButton" type="search"></icon>
   </button>
 </view>
