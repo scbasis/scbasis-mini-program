@@ -1,19 +1,5 @@
 /* components/search-bar.wxss */
-ul{
-  display: flex;
-  list-style: none;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:center;
-}
 
-
-.userinfo-avatar {
-  width: 64rpx;
-  height: 64rpx;
-  border-radius: 50%;
-  background-color:#000000;
-}
 
 
 .search-container{
@@ -23,7 +9,7 @@ ul{
 .search-container input{
   border-radius: 3px 0 0 3px;
   background-color: #c7d0d8;
-  width: 150px;
+  width: 90%;
   padding:5px;
 }
 

@@ -21,14 +21,14 @@
         </view>
       </li>
 
-      <li>
-        <button size="mini">
-        temp
+      <!-- <li>
+        <button class="cat-button" size="mini">
+          <image class="cat-image" src="../../images/cat.jpg" mode="widthFix"></image>
         </button>
-      </li>
+      </li> -->
       <li>
-        <button size="mini">
-        temp
+        <button class="plus-button" size="mini">
+          <image class="plus-image" src="../../images/plus.png" mode="widthFix"></image>
         </button>
       </li>
     </ul>
@@ -42,9 +42,10 @@
     </view>
     <!--<filter button> -->
     <view class="button-container">
-      <button class="button-container-text">Filter by ⬇</button>
+      <button class="button-container-text" size="mini">Filter by ⬇</button>
     </view>
     <!--</filter button> -->
+    <view class="clr"></view>
   </view>
 
   <!-- <scroll-view scroll-y> -->

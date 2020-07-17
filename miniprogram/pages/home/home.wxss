@@ -5,9 +5,9 @@ ul {
   list-style: none;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  height: 40px;
-  background: #f7f5e3;
+  justify-content: space-between;
+  height: 100%;
+  background: rgb(252, 246, 246)
 }
 
 .userinfo-avatar {
@@ -44,6 +44,10 @@ ul {
   padding-top: 2px;
 }
 
+.cat-image, .plus-image {
+  width: 1.6em;
+}
+
 .header {
   background: white;
 }
@@ -70,7 +74,6 @@ ul {
 
 .button-container {
   width: 31%;
-  background: #47624a;
   float: right;
   color: #fff;
   margin-right: 10px;
@@ -78,9 +81,8 @@ ul {
 }
 
 .button-container-text {
-  font-size: 12px;
-  padding-left: 1em !important;
-  padding-right: 8em !important;
+  background: #47624a;
+  font-size: 0.5em;
 }
 
 .button-container:active {
