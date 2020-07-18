@@ -11,14 +11,12 @@
           <!--</block>-->
         </view>
       </li>
-      <li>
+      <li class="search-container">
         <!--searchBox+searchButton-->
-        <view class="search-container">
-          <input type="search" placeholder="Search..."></input>
-          <button >
-            <icon type="search"></icon>
-          </button>
-        </view>
+        <input type="search" placeholder="Search..."></input>
+        <button >
+          <icon type="search"></icon>
+        </button>
       </li>
 
       <!-- <li>
@@ -28,7 +26,7 @@
       </li> -->
       <li>
         <button class="plus-button" size="mini">
-          <image class="plus-image" src="../../images/plus.png" mode="widthFix"></image>
+          <image class="plus-image" src="../../images/plus.jpg" mode="widthFix"></image>
         </button>
       </li>
     </ul>

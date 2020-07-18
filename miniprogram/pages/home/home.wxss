@@ -23,6 +23,7 @@ ul {
 .search-container {
   margin-top: 5px;
   margin-bottom: 15px;
+  flex: 0.5 1  60%;
   display: flex;
   margin-left: 11px;
 }
@@ -30,7 +31,7 @@ ul {
 .search-container input {
   border-radius: 3px 0 0 3px;
   background-color: #c7d0d8;
-  width: 130px;
+  width: 100%;
   padding: 5px;
 }
 
