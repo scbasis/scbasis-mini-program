@@ -1,0 +1,45 @@
+<header-bar class="header">
+  <ul class="header-inner-container">
+    <li class="cancel-container">
+     <button size="mini" class="cancel-button">
+      Cancel
+      </button>
+    </li>
+    <li class="search-container">
+      <search></search>
+    </li>
+  </ul>
+</header-bar>
+
+<view class="results-container">
+  <view class="categories-link h2">
+    <image src="../../images/cat.jpg" mode="widthFix" class="cat-image"></image>
+    Show all categories...
+  </view>
+  <view class="categories-h2 h2">
+    Related categories:
+  </view>
+  <view wx:for="{{categoryResults}}" wx:for-item="cat" wx:key="id" class="category-results results">
+    <view class="category-result-container result">
+      <view class="cat-name">{{cat.name}}</view>
+      <view class="cat-post-count">Posts: {{cat.postCount}}</view>
+      <view class="clr"></view>
+    </view>
+  </view>
+  <view class="posts-h2 h2">
+    Related posts:
+  </view>
+  <view wx:for="{{postResults}}" wx:for-item="post" wx:key="id" class="post-results results">
+    <view class="post-result-container result">
+      {{post.title}}
+    </view>
+  </view>
+  <view class="users-h2 h2">
+    Related users:
+  </view>
+  <view wx:for="{{userResults}}" wx:for-item="user" wx:key="id" class="user-results results">
+    <view class="user-result-container result">
+      {{user.name}}
+    </view>
+  </view>
+</view>

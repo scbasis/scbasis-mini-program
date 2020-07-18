@@ -1,0 +1,56 @@
+.header-inner-container {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  color: rgb(82, 82, 82);
+}
+
+.cancel-container {
+  margin: 0.2em 0.2em;
+  flex: 0 1 4.5em;
+}
+
+.search-container {
+  flex: 0.5 1 60%;
+}
+
+.results-container {
+  margin-top: 40px;
+  background: snow;
+  color: rgb(82, 82, 82);
+  line-height: 1.7em;
+  padding: 0.5em 1em;
+}
+
+.categories-link {
+  font-style: italic;
+  color: rgb(35, 102, 248);
+}
+
+.cat-image {
+  width: 1.7em;
+  vertical-align: middle;
+}
+
+.h2 {
+  line-height: 2em;
+  font-weight: 600;
+} 
+
+.results {
+  padding-left: 1em;
+}
+
+.result {
+  border-bottom: lightgray solid 1px;
+}
+
+.cat-name {
+  float: left;
+}
+
+.cat-post-count {
+  float: right;
+  font-size: 0.7em;
+  color: rgb(100, 100, 100);
+}

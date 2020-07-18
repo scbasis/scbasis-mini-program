@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/post/post",
-    "pages/new post/new post",
     "pages/home/home",
+    "pages/search/search",
+    "pages/new post/new post",
+    "pages/post/post",
     "pages/category/category"
   ],
   "window": {
