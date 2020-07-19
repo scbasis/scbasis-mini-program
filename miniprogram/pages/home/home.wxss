@@ -73,26 +73,25 @@ ul {
   color: #47624a;
 }
 
-.button-container {
-  width: 31%;
-  float: right;
-  color: #fff;
-  margin-right: 10px;
-  border-radius: 3%;
-}
+
 
 .button-container-text {
   background: #47624a;
   font-size: 0.5em;
+  float: right;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: #FFF;
+
 }
 
-.button-container:active {
-  width: 31%;
+.button-container-text:active {
   background: #fff;
   float: right;
   color: #47624a;
   border: thin, #47624a;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .outer-post-container {
