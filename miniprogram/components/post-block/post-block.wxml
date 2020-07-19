@@ -1,11 +1,11 @@
 <view class="post-container">
-  <view class="title">
+  <view class="title" bindtap="toPost">
     {{post.title}}
   </view>
   <view class="vote-container">
-    <up-arrow post="{{post}}"></up-arrow>
+    <up-arrow post="{{post}}" bindupv="upv"></up-arrow>
     <view class="num-votes">{{post.votes}}</view>
-    <down-arrow post="{{post}}"></down-arrow>
+    <down-arrow post="{{post}}" binddownv="downv"></down-arrow>
   </view>
   <view class="body-container">
     <view class="body-text">

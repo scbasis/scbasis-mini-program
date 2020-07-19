@@ -1,8 +1,10 @@
 <view class="container">
   <header-bar>
-
-    <navigator url="../home/home" hover-class="navigator-hover" class="navigatorBtn" open-type="redirect">Back</navigator>
-
+    <button class="backButton" size="mini" bindtap="backHome">
+      <p class="buttonText">
+      Back
+      </p>
+    </button>
   </header-bar>
 
   <view class="main-container">
