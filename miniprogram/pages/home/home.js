@@ -1,6 +1,5 @@
 // miniprogram/pages/home/home.js
 
-const appInstance = getApp()
 const app = getApp()
 
 Page({
@@ -22,27 +21,10 @@ Page({
     
   },
 
-  loadMore: function() {
-    const db = wx.cloud.database('scbasiscloud')
-    var that = this
-    var loadnuml = appInstance.loadnum
-    db.collection('posts').skip(loadnuml).limit(20).get({
-      success: function(res) {
-        console.log(res.data)
-        that.setData({
-          posts: that.data.posts.concat(res.data)
-        })
-        console.log(that.data.posts)
-      }
-    })
-    appInstance.loadnum = loadnuml + 20
-    console.log(appInstance.loadnum)
-  },
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function(options) {
-    loadMore()
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -69,6 +51,7 @@ Page({
         }
       })
     }
+    this.loadMore()
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -118,7 +101,7 @@ Page({
    * Called when page reach bottom
    */
   onReachBottom: function() {
-    loadMore()
+    this.loadMore()
   },
 
   /**
@@ -126,5 +109,28 @@ Page({
    */
   onShareAppMessage: function() {
 
+  },
+
+  loadMore: function() {
+    const db = wx.cloud.database('scbasiscloud')
+    var that = this
+    var loadnuml = app.globalData.loadnum
+    db.collection('posts').count({success: function(res) {
+      console.log(res.total)
+    }})
+    db.collection('posts').skip(loadnuml).limit(20).get({
+      success: function(res) {
+        console.log(res.data)
+        that.setData({
+          posts: that.data.posts.concat(res.data)
+        })
+        console.log(that.data.posts)
+      }
+    })
+    db.collection('posts').count({success: function(res) {
+      console.log(res.total)
+      app.globalData.loadnum = res.total
+    }})
+    console.log(app.globalData.loadnum)
   }
 })

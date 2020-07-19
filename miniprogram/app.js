@@ -43,10 +43,9 @@ App({
       }
     })
   },
-  loadnum: 0
   
-  /*this was supposed to be here on the original
   globalData: {
+    loadnum: 0,
     userInfo: null
-  }*/
+  }
 })
