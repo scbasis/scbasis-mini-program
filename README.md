@@ -37,9 +37,10 @@ Jul 18
 
 
 Jul 25
-- Categories list design
-- Post & New post front
-- Home back + design review
+- Categories list design - Anthea (+ Kenny)
+- Post & New post front - Kenny
+- Home back - Oliver
+- Home design review - Anthea & Sam
 
 Aug 1
 - Category page design
