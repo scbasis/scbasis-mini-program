@@ -25,7 +25,15 @@
         </view>
       </view>
       <view class="clr"></view>
-
+      <view class="footer-container">
+        <view class="comment-button-container">
+          <button size="mini" class="comment-button">Comment↩</button>
+        </view>
+        <view class="info-container">
+          Posted by {{post.user}} on {{post.time}}
+        </view>
+        <view class="clr"></view>
+      </view>
     </view>
 
     <view class="comments-container">

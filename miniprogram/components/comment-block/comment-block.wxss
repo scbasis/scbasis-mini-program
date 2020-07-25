@@ -22,6 +22,17 @@
   font-family:inherit;
 }
 
+.reply-button-container {
+  float: right;
+}
+
+.reply-button {
+  font-size: 0.8em !important;
+  font-weight: 700 !important;
+  padding: 0 0.1em !important;
+  vertical-align: middle;
+}
+
 .vote-container {
   display: block;
   overflow: hidden;

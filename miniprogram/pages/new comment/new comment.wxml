@@ -1,0 +1,73 @@
+<view class="container">
+  <header-bar>
+    <button class="backButton" size="mini" bindtap="backHome">
+      <p class="buttonText">
+      Back
+      </p>
+    </button>
+  </header-bar>
+
+  <view class="main-container">
+  
+      <!-- using first placeholder post from home.js -->
+    <view class="post-container">
+      <view class="title">
+        {{post.title}}
+      </view>
+      <view class="vote-container">
+        <up-arrow post="{{post}}"></up-arrow>
+        <view class="num-votes">{{post.votes}}</view>
+        <down-arrow post="{{post}}"></down-arrow>
+      </view>
+      <view class="body-container">
+        <view class="body-text">
+        {{post.body}}
+        </view>
+      </view>
+      <view class="clr"></view>
+      <view class="footer-container">
+        <view class="comment-button-container">
+          <button size="mini" class="comment-button">Comment↩</button>
+        </view>
+        <view class="info-container">
+          Posted by {{post.user}} on {{post.time}}
+        </view>
+        <view class="clr"></view>
+      </view>
+    </view>
+
+    <view class="comment-container">
+      <comment-block comment="{{comment}}" recurse="{{false}}"></comment-block> 
+      <!-- get comment from post page idrk -->
+      <view class="clr"></view>
+    </view>
+
+    <view class="textarea-container">
+      <form class="form" bindsubmit="createPost">
+        <view class="body-container">
+          <textarea type="text" class="body-textarea" placeholder="Write your reply here..."
+            placeholder-class="body-placeholder" maxlength="2000" bindinput="getContentData"></textarea>
+        </view>
+
+        <view class="footer">
+          <view class="footer-left">
+            <button size="mini" class="camera-button">
+              <image src="../../images/camera.png" mode="widthFix"></image>
+            </button>
+            <button size="mini" class="picture-button">
+              <image src="../../images/picture.png" mode="widthFix"></image>
+            </button>
+            <button size="mini" class="emoji-button">
+              <image src="../../images/emoji.png" mode="widthFix"></image>
+            </button>
+          </view>
+          <view class="footer-right">
+            <button size="mini" form-type="submit" class="submit-button">Post!</button>
+          </view>
+          <view class="clr"></view>
+        </view>
+      </form>
+    </view>
+  </view>
+
+</view>
