@@ -30,8 +30,7 @@
 .post-container {
   background: white;
   border-radius: 5px;
-  padding: 1em;
-  padding-bottom: 0.1em;
+  padding: 1em 0.5em 0.5em 0.3em;
   margin: 0;
   position: relative;
   /* height: 100%; */
@@ -48,10 +47,15 @@
   color: snow; 
 }
 
+.content-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
 .vote-container {
   padding-top: 0.9em;
-  float:left;
-  width: 10%;
+  flex: 0 1 3em;
 }
 
 .upvote-button, .downvote-button, num-votes {
@@ -60,7 +64,9 @@
 }
 
 .num-votes {
-  padding-bottom: 0.4em;
+  padding: 0.2em 0.2em;
+  vertical-align: middle;
+  text-align: center;
 }
 .upvote-button, .downvote-button {
   display: inline;
@@ -76,12 +82,26 @@
   height: 1em;
 }
 
-.body-text {
+.body-container {
   padding-top: 0.8em;
-  float: right;
-  width: 80%;
+  flex: 3 1 80%;
   font-size: 13px;
   color:#000;
+}
+
+.swiper-container {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+
+.swiper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
 }
 
 .comment-button-container {

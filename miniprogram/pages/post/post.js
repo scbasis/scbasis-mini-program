@@ -8,6 +8,18 @@ Page({
     post: { // using first placeholder post from home.js
       title: "Interesting Title 1",
       body: "Body text here- Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm asldfkja iasudfh asiufh auishoqw q wofjh asdofiuh aushf weiourh sodif, sdog! asidf akdj fijawef.",
+      media: [
+        {
+          type: "image",
+          id: "m0001",
+          source: "../../images/placeholders/2meirl4meirl.jpg"
+        },
+        {
+          type: "video",
+          id: "m0002",
+          source: "../../images/placeholders/yesyesyesyesno.mp4"
+        }
+      ],
       votes: 420,
       id: "p0000",
       upvoted: "false",
@@ -38,7 +50,7 @@ Page({
       id: "c0003",
       children: [{
         text: "No one likes you",
-        votes: 12,
+        votes: -12,
         depth: 1,
         id: "c0004",
         children: []

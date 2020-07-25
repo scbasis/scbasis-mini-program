@@ -9,8 +9,11 @@ Features for Pages
         - Profile button
     - Image/video thumbnails
 - Post
-    - New comment textarea
+    - Comment buttons
     - Image/video
+- New Comment
+    - Original post, original comment
+    - Text area
 - New Post
     - Image/video
     - Choose category
