@@ -12,7 +12,7 @@
   top: -0.6em;
   padding: 0.2em;
   padding-left: 0.8em;
-  background: #47624a;
+  background: #47625a;
   width: 50%;
   color: snow; 
 }
@@ -25,7 +25,7 @@
 
 .num-votes {
   text-align: center;
-  color:#47624a;
+  color:#47625a;
 }
 
 .body-text {

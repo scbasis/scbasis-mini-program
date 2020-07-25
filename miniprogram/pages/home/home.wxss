@@ -25,14 +25,13 @@ ul {
   margin-bottom: 15px;
   flex: 0.5 1  60%;
   display: flex;
-  margin-left: 11px;
 }
 
 .search-container input {
   border-radius: 3px 0 0 3px;
   background-color: #c7d0d8;
-  width: 100%;
   padding: 5px;
+  width:100%;
 }
 
 .search-container button {
@@ -63,20 +62,20 @@ ul {
 .h1 {
   text-align: center;
   font: normal 40px Impact, Charcoal, sans-serif;
-  color: #47624a;
+  color: #47625a;
 }
 
 .h2 {
   text-align: center;
   font-size: 10px;
   letter-spacing: 0.2em;
-  color: #47624a;
+  color: #47625a;
 }
 
 
 
 .button-container-text {
-  background: #47624a;
+  background: #47625a;
   font-size: 0.5em;
   float: right;
   margin-right: 10px;
@@ -88,8 +87,8 @@ ul {
 .button-container-text:active {
   background: #fff;
   float: right;
-  color: #47624a;
-  border: thin, #47624a;
+  color: #47625a;
+  border: thin, #47625a;
   margin-right: 10px;
   margin-bottom: 10px;
 }

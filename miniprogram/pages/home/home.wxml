@@ -19,14 +19,9 @@
         </button>
       </li>
 
-      <!-- <li>
-        <button class="cat-button" size="mini">
-          <image class="cat-image" src="../../images/cat.jpg" mode="widthFix"></image>
-        </button>
-      </li> -->
       <li>
         <button class="plus-button" size="mini">
-          <image class="plus-image" src="../../images/plus.png" mode="widthFix"></image>
+          <image class="plus-image" src="../../images/Greyplus.png" mode="widthFix"></image>
         </button>
       </li>
     </ul>
