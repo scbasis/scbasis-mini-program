@@ -21,7 +21,7 @@
 
       <li>
         <button class="plus-button" size="mini">
-          <image class="plus-image" src="../../images/Greyplus.png" mode="widthFix"></image>
+          <image bindtap="addPost" class="plus-image" src="../../images/Greyplus.png" mode="widthFix"></image>
         </button>
       </li>
     </ul>

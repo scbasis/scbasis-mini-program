@@ -41,7 +41,7 @@
             </button>
           </view>
           <view class="footer-right">
-            <button size="mini" form-type="submit" class="submit-button">Post!</button>
+            <button bindtouchend="createPost" size="mini">Post!</button>
           </view>
           <view class="clr"></view>
         </view>

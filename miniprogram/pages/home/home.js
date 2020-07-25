@@ -10,15 +10,7 @@ Page({
     userInfo: {}, 
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    posts: [{
-      id: '0001',
-      title: 'placeholder',
-      body: 'placeholder',
-      votes: 1,
-      upvoted: false,
-      downvoted: false
-    }]
-    
+    posts: []
   },
 
   /**
@@ -80,21 +72,31 @@ Page({
    * Lifecycle function--Called when page hide
    */
   onHide: function() {
-
+    this.setData({
+      posts: []
+    })
+    app.globalData.loadnum = 0
   },
 
   /**
    * Lifecycle function--Called when page unload
    */
   onUnload: function() {
-
+    this.setData({
+      posts: []
+    })
+    app.globalData.loadnum = 0
   },
 
   /**
    * Page event handler function--Called when user drop down
    */
   onPullDownRefresh: function() {
-
+    this.setData({
+      posts: []
+    })
+    app.globalData.loadnum = 0
+    this.loadMore()
   },
 
   /**
@@ -115,12 +117,8 @@ Page({
     const db = wx.cloud.database('scbasiscloud')
     var that = this
     var loadnuml = app.globalData.loadnum
-    db.collection('posts').count({success: function(res) {
-      console.log(res.total)
-    }})
     db.collection('posts').skip(loadnuml).limit(20).get({
       success: function(res) {
-        console.log(res.data)
         that.setData({
           posts: that.data.posts.concat(res.data)
         })
@@ -128,9 +126,14 @@ Page({
       }
     })
     db.collection('posts').count({success: function(res) {
-      console.log(res.total)
-      app.globalData.loadnum = res.total
+      app.globalData.loadnum = Math.min(res.total,app.globalData.loadnum+20)
     }})
     console.log(app.globalData.loadnum)
+  },
+
+  addPost: function(){
+    wx.navigateTo({
+      url: '../new post/new post'
+    })
   }
 })

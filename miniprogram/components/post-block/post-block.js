@@ -43,7 +43,14 @@ Component({
       this.setData({
         post: this.properties.post
       })
-      console.log(this.properties.post);
+
+      var that = this
+      wx.cloud.callFunction({
+        name: 'update',
+        data: {
+          post: that.properties.post
+        }
+      })
     },
 
     downv(event) {
@@ -61,7 +68,14 @@ Component({
       this.setData({
         post: this.properties.post
       })
-      console.log(this.properties.post);
+
+      var that = this
+      wx.cloud.callFunction({
+        name: 'update',
+        data: {
+          post: that.properties.post
+        }
+      })
     }
   }
 })

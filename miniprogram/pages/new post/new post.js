@@ -109,16 +109,22 @@ Page({
   createPost: function(event){
     const db = wx.cloud.database('scbasiscloud')
     var that = this
-    var loadnuml = appInstance.loadnum
-    db.collection('posts').add({
-      data: {
-        title: that.data.title,
-        body: that.data.content,
-        votes: 0,
-        id: 0,
-        upvoted: false,
-        downvoted: false
-      }
+    db.collection('posts').count({success: function(res) {
+      console.log(res.total)
+      db.collection('posts').add({
+        data: {
+          title: that.data.title,
+          body: that.data.content,
+          votes: 0,
+          id: res.total,
+          upvoted: false,
+          downvoted: false
+        }
+      })
+    }})
+    
+    wx.redirectTo({
+      url: '../home/home',
     })
   }
 })
