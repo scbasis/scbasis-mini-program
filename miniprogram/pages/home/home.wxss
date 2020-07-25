@@ -44,7 +44,7 @@ ul {
   padding-top: 2px;
 }
 
-.cat-image, .plus-image {
+.plus-image {
   width: 1.6em;
 }
 

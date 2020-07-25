@@ -54,6 +54,10 @@
   color: lightgrey;
 }
 
+.picker-container {
+  padding: 0.5em 0.8em 0.4em 0.3em;
+}
+
 .body-textarea{
   padding-top: 1.4em;
   padding-left: 0.5em;

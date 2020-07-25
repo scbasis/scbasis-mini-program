@@ -8,7 +8,25 @@ Page({
    */
   data: {
     title: '',
-    content: ''
+    content: '',
+    categories: [
+      "None :P",
+      "The Comment Section (r/commentsection)",
+      "2meirl4meirl (r/2meirl4meirl)"
+    ],
+    index: 0
+    // categories: [
+    //   {
+    //     title: "Choose Category",
+    //     name: "",
+    //     thumbnail: "none i guess", 
+    //   },
+    //   { // category objects
+    //     title: "The Comment Section",
+    //     name: "r/commentsection",
+    //     thumbnail: "maybe?"
+    //   }
+    // ]
   },
 
   backHome: function(){

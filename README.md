@@ -16,7 +16,7 @@ Features for Pages
     - Text area
 - New Post
     - Image/video
-    - Choose category
+    - Choose category *ugly, should fix later
 - Categories list
 - Category Page
     - Posts
