@@ -66,10 +66,6 @@
   color:black;
 }
 
-.footer {
-
-}
-
 .footer-left {
   float: left;
 }

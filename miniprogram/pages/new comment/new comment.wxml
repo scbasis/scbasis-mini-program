@@ -8,15 +8,44 @@
   </header-bar>
 
   <view class="main-container">
+  
+      <!-- using first placeholder post from home.js -->
     <view class="post-container">
-      <form class="form" bindsubmit="createPost">
-        <view class="title">
-          <textarea type="text" class="title-textarea" placeholder="Interesting title..." 
-            placeholder-class="title-placeholder" bindinput="getTitleData"></textarea>
+      <view class="title">
+        {{post.title}}
+      </view>
+      <view class="vote-container">
+        <up-arrow post="{{post}}"></up-arrow>
+        <view class="num-votes">{{post.votes}}</view>
+        <down-arrow post="{{post}}"></down-arrow>
+      </view>
+      <view class="body-container">
+        <view class="body-text">
+        {{post.body}}
         </view>
-        
+      </view>
+      <view class="clr"></view>
+      <view class="footer-container">
+        <view class="comment-button-container">
+          <button size="mini" class="comment-button">Comment↩</button>
+        </view>
+        <view class="info-container">
+          Posted by {{post.user}} on {{post.time}}
+        </view>
+        <view class="clr"></view>
+      </view>
+    </view>
+
+    <view class="comment-container">
+      <comment-block comment="{{comment}}" recurse="{{false}}"></comment-block> 
+      <!-- get comment from post page idrk -->
+      <view class="clr"></view>
+    </view>
+
+    <view class="textarea-container">
+      <form class="form" bindsubmit="createPost">
         <view class="body-container">
-          <textarea type="text" class="body-textarea" placeholder="Write something interesting here..."
+          <textarea type="text" class="body-textarea" placeholder="Write your reply here..."
             placeholder-class="body-placeholder" maxlength="2000" bindinput="getContentData"></textarea>
         </view>
 
@@ -39,8 +68,6 @@
         </view>
       </form>
     </view>
-
   </view>
 
 </view>
-

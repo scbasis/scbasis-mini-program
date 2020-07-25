@@ -1,14 +1,37 @@
-// miniprogram/pages/new post/new post.js
-const appInstance = getApp()
-
+// miniprogram/pages/post/post.js
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    title: '',
-    content: ''
+    post: { // using first placeholder post from home.js
+      title: "Interesting Title 1",
+      body: "Body text here- Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm asldfkja iasudfh asiufh auishoqw q wofjh asdofiuh aushf weiourh sodif, sdog! asidf akdj fijawef.",
+      votes: 420,
+      id: "p0000",
+      upvoted: "false",
+      downvoted: "false"
+    },
+    comment: {
+      text: "This is a comment",
+      votes: 11,
+      depth: 0,
+      id: "c0000",
+      children: [{
+        text: "This is a reply to a comment",
+        votes: 6,
+        depth: 1, 
+        id: "c0001",
+        children: [{
+          text: "This is the third",
+          votes: -1,
+          depth: 2, 
+          id: "c0002",
+          children: []
+        }]
+      }]
+    }
   },
 
   backHome: function(){
@@ -71,36 +94,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  /***
-   * Called when user enters the title
-   */
-  getTitleData: function(event){
-    this.setData({
-      title: event.detail.value
-    })
-    console.log(this.data.title)
-  },
-  getContentData: function(event){
-    this.setData({
-      content: event.detail.value
-    })
-    console.log(this.data.content)
-  },
-  createPost: function(event){
-    const db = wx.cloud.database('scbasiscloud')
-    var that = this
-    var loadnuml = appInstance.loadnum
-    db.collection('posts').add({
-      data: {
-        title: that.data.title,
-        body: that.data.content,
-        votes: 0,
-        id: 0,
-        upvoted: false,
-        downvoted: false
-      }
-    })
   }
 })

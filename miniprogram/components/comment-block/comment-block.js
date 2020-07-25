@@ -7,6 +7,10 @@ Component({
     comment: {
       type: Object,
       value: undefined
+    },
+    recurse: {
+      type: Boolean,
+      value: true
     }
   },
 
