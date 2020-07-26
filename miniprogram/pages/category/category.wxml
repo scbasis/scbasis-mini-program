@@ -11,7 +11,10 @@
   </header-bar>
 </view>
 
+<!--add function of finding the hottest 3 discussions in the category and adding a link-->
+
 <!--Category Names that are decided by the people who write the new posts. Need to add a link to a js function that turns the wxss "display" of tableContainer- + "id" into show-->
+
 <view class="catHeadrContainer">
   <view class="layoutHorizontal">
     <view bindtap="showDiscussion(1)">
@@ -22,124 +25,30 @@
     <button class="btnNew" size="mini">
       New
     </button>
-
   </view>
 </view>
 
-<!--add function of finding the hottest 3 discussions in the category and adding a link-->
+<view class="post-container">
+  <view class="title-table">
+    <view class="table-tr">
+      <view class="table-td">
+        <div class="post-details-column-wrap">
+          <div>Title of post</div>
+          <div>Author 15d 70comments</div>
+        </div>
+      </view>
 
-<view id="cat_1" class="table">
-  <view class="table-tr">
-    <view class="table-th">
-      Discussion Name
-    </view>
-    <view class="table-th">
-      Author
-    </view>
-    <view class="table-th">
-      Views
-    </view>
-  </view>
+      <view class="table-td">
+        image
+      </view>
 
-  <view class="table-tr">
-    <view class="table-td">
-      testDiscussion
-    </view>
-    <view class="table-td">
-      testAuthor
-    </view>
-    <view class="table-td">
-      testViews
-    </view>
-  </view>
-
-  <view class="table-tr">
-    <view class="table-td">
-      testDiscussion
-    </view>
-    <view class="table-td">
-      testAuthor
-    </view>
-    <view class="table-td">
-      testViews
-    </view>
-  </view>
-
-  <view class="table-tr">
-    <view class="table-td">
-      testDiscussion
-    </view>
-    <view class="table-td">
-      testAuthor
-    </view>
-    <view class="table-td">
-      testViews
-    </view>
-  </view>
-</view>
-
-
-
-<view class="catHeadrContainer">
-  <view class="layoutHorizontal">
-    <view bindtap="showDiscussion(2)">
-      <label class="catTitle">
-        Category Name 2
-      </label>
-    </view>
-    <button class="btnNew" size="mini">
-      New
-    </button>
-  </view>
-</view>
-
-
-<view id="cat_2" class="table">
-  <view class="table-tr">
-    <view class="table-th">
-      Discussion Name
-    </view>
-    <view class="table-th">
-      Author
-    </view>
-    <view class="table-th">
-      Views
-    </view>
-  </view>
-
-  <view class="table-tr">
-    <view class="table-td">
-      testDiscussion
-    </view>
-    <view class="table-td">
-      testAuthor
-    </view>
-    <view class="table-td">
-      testViews
-    </view>
-  </view>
-
-  <view class="table-tr">
-    <view class="table-td">
-      testDiscussion
-    </view>
-    <view class="table-td">
-      testAuthor
-    </view>
-    <view class="table-td">
-      testViews
-    </view>
-  </view>
-
-  <view class="table-tr">
-    <view class="table-td">
-      testDiscussion
-    </view>
-    <view class="table-td">
-      testAuthor
-    </view>
-    <view class="table-td">
-      testViews
+      <view class="table-td">
+        <div class="votes">
+          <div>↑</div>
+          <div>10</div>
+          <div>↓</div>
+        </div>
+      </view>
     </view>
   </view>
 </view>

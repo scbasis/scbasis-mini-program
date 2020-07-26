@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/category/category",
     "pages/new post/new post",
     "pages/home/home",
     "pages/post/post",
     "pages/new comment/new comment",
-    "pages/search/search",
-    "pages/category/category"
+    "pages/search/search"
   ],
   "window": {
     "backgroundColor": "#EFF0F2",
