@@ -122,6 +122,11 @@
   color: gray;
 }
 
+navigator {
+  display: inline;
+  color: rgb(97, 134, 255);
+}
+
 .comments-container {
   margin-left: -1em;
 }

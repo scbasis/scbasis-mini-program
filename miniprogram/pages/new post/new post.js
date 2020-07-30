@@ -1,5 +1,5 @@
 // miniprogram/pages/new post/new post.js
-const appInstance = getApp()
+const app = getApp()
 
 Page({
 
@@ -14,7 +14,10 @@ Page({
       "The Comment Section (r/commentsection)",
       "2meirl4meirl (r/2meirl4meirl)"
     ],
-    index: 0
+    index: 0,
+    userInfo: {}, 
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
     // categories: [
     //   {
     //     title: "Choose Category",
@@ -39,7 +42,32 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    
+    if (app.globalData.userInfo) {
+      this.setData({
+        userInfo: app.globalData.userInfo,
+        hasUserInfo: true
+      })
+    } else if (this.data.canIUse) {
+      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+      // 所以此处加入 callback 以防止这种情况
+      app.userInfoReadyCallback = res => {
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
+      }
+    } else {
+      // 在没有 open-type=getUserInfo 版本的兼容处理
+      wx.getUserInfo({
+        success: res => {
+          app.globalData.userInfo = res.userInfo
+          this.setData({
+            userInfo: res.userInfo,
+            hasUserInfo: true
+          })
+        }
+      })
+    }
   },
 
   /**
@@ -109,6 +137,8 @@ Page({
   createPost: function(event){
     const db = wx.cloud.database('scbasiscloud')
     var that = this
+    const date = Date.now()
+    
     db.collection('posts').count({success: function(res) {
       console.log(res.total)
       db.collection('posts').add({
@@ -118,7 +148,15 @@ Page({
           votes: 0,
           id: res.total,
           upvoted: false,
-          downvoted: false
+          downvoted: false,
+          time: {
+            year: date.getFullYear().toString(10),
+            month: date.getMonth().toString(10).padStart(2, '0'),
+            day: date.getDate().toString(10).padStart(2, '0'),
+            hour: date.getHours().toString().padStart(2, '0'),
+            minute: date.getMinutes().toString().padStart(2, '0')
+          },
+          user: this.userInfo.nickName
         }
       })
     }})
@@ -126,5 +164,11 @@ Page({
     wx.redirectTo({
       url: '../home/home',
     })
-  }
+  },
+  bindPickerChange: function(e) {
+    console.log('pickerA selection change is sent, carrying the value ', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
 })

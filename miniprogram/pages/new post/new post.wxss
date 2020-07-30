@@ -70,6 +70,30 @@
   color:black;
 }
 
+.media-scroll {
+  width: 200%;
+  height: 10em;
+}
+
+.scroll-item {
+  width: 10em;
+  height: 100%;
+  display: inline-block;
+}
+
+#red {
+  background: red;
+}
+#green {
+  background: green;
+}
+#yellow {
+  background: yellow;
+}
+#blue {
+  background: blue;
+}
+
 .footer-left {
   float: left;
 }
