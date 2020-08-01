@@ -23,7 +23,17 @@ Page({
       votes: 420,
       id: "p0000",
       upvoted: "false",
-      downvoted: "false"
+      downvoted: "false",
+      user: { // link to contact page?
+        name: "gayboi",
+      },
+      time: {
+        year: "2020",
+        month: "7",
+        day: "30",
+        hour: "20",
+        minute: "01"
+      }
     },
     comments: [{
       text: "This is a comment",

@@ -16,7 +16,7 @@
         </view>
         
         <view class="picker-container">
-          <picker mode="selector" range="{{categories}}" value="index" class="category-selector">
+          <picker mode="selector" bindchange="bindPickerChange" range="{{categories}}" value="index" class="category-selector">
             <view class="picker">
               CHOOSE CATEGORY ► {{categories[index]}}
             </view>
@@ -27,6 +27,15 @@
           <textarea type="text" class="body-textarea" placeholder="Write something interesting here..."
             placeholder-class="body-placeholder" maxlength="2000" bindinput="getContentData"></textarea>
         </view>
+
+        <!-- <view class="media-scroll-container">
+          <scroll-view class="media-scroll" scroll-x>
+            <view id="green" class="scroll-item"></view>
+            <view id="red"  class="scroll-item"></view>
+            <view id="yellow" class="scroll-item"></view>
+            <view id="blue" class="scroll-item"></view>
+          </scroll-view>
+        </view> -->
 
         <view class="footer">
           <view class="footer-left">

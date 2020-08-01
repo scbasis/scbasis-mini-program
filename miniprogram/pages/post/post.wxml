@@ -48,7 +48,7 @@
           <button size="mini" class="comment-button">Comment↩</button>
         </view>
         <view class="info-container">
-          Posted by {{post.user}} on {{post.time}}
+          Posted by <navigator>{{post.user.name}}</navigator> on {{post.time.year}}/{{post.time.month}}/{{post.time.day}} {{post.time.hour}}:{{post.time.minute}}
         </view>
         <view class="clr"></view>
       </view>

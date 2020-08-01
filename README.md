@@ -46,9 +46,19 @@ Jul 25
 - Home design review - Anthea & Sam
 
 Aug 1
-- Category page design
-- Categories list front
+- Category page design - somebody
+- Categories list front - Anthea
+- Research notifications - Kenny
 - Post & new post back + review
+Oliver:
+    - comment buttons redirect
+    - home -> post only works when clicking on title?
+    - Back button on new comments
+    - Comment upvoting?
+    - Upload/get media/post/comment from cloud
+    Kenny:
+    - category picker change index
+    - Post info (user, date)
 
 Aug 8
 - Profile page & Notifications design
