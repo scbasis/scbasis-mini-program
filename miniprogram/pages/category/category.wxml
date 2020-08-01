@@ -16,16 +16,12 @@
 <!--Category Names that are decided by the people who write the new posts. Need to add a link to a js function that turns the wxss "display" of tableContainer- + "id" into show-->
 
 <view class="catHeadrContainer">
-  <view class="layoutHorizontal">
-    <view bindtap="showDiscussion(1)">
-      <label class="catTitle">
-        Category Name 1
-      </label>
-    </view>
-    <button class="btnNew" size="mini">
-      New
-    </button>
+  <view bindtap="showDiscussion(1)">
+    <label class="catTitle">
+      Category name 1
+    </label>
   </view>
+  <image bindtap="addPost" class="plus-image" src="../../images/Greyplus.png" mode="widthFix"></image>
 </view>
 
 <view class="post-container">
@@ -33,13 +29,13 @@
     <view class="table-tr">
       <view class="table-td">
         <div class="post-details-column-wrap">
-          <div>Title of post</div>
-          <div>Author 15d 70comments</div>
+          <div class="titles-font">Title of post here: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut lacinia nibh. </div>
+          <div class="author-time-comments">Author 8/1/2020 70 comments</div>
         </div>
       </view>
 
       <view class="table-td">
-        image
+        <image class="small-thumbnail-preview">placeholder</image>
       </view>
 
       <view class="table-td">
