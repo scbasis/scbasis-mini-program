@@ -41,6 +41,56 @@
       <view class="table-td">
         <div class="votes">
           <div>↑</div>
+          <div>30</div>
+          <div>↓</div>
+        </div>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="post-container">
+  <view class="title-table">
+    <view class="table-tr">
+      <view class="table-td">
+        <div class="post-details-column-wrap">
+          <div class="titles-font">Title of post here: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut lacinia nibh. </div>
+          <div class="author-time-comments">Author 8/1/2020 70 comments</div>
+        </div>
+      </view>
+
+      <view class="table-td">
+        <image class="small-thumbnail-preview">placeholder</image>
+      </view>
+
+      <view class="table-td">
+        <div class="votes">
+          <div>↑</div>
+          <div>20</div>
+          <div>↓</div>
+        </div>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="post-container">
+  <view class="title-table">
+    <view class="table-tr">
+      <view class="table-td">
+        <div class="post-details-column-wrap">
+          <div class="titles-font">Title of post here: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut lacinia nibh. </div>
+          <div class="author-time-comments">Author 8/1/2020 70 comments</div>
+        </div>
+      </view>
+
+      <view class="table-td">
+        <image class="small-thumbnail-preview">placeholder</image>
+      </view>
+
+      <view class="table-td">
+        <div class="votes">
+          <div>↑</div>
           <div>10</div>
           <div>↓</div>
         </div>
