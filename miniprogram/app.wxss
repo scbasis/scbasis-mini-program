@@ -31,7 +31,7 @@ button::after{
 
 
 page {
-  background: #eeeeee;
+  background: #eff0f2;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

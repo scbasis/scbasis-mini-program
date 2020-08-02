@@ -3,11 +3,15 @@
 <!--headerbar-->
 <view class="container">
   <header-bar>
-    <button class="backButton" size="mini">
-      <p class="buttonText">
-        Back
-      </p>
-    </button>
+    <view class="flex-container">
+      <button class="backButton" size="mini">
+        <p class="buttonText">
+          Back
+        </p>
+      </button>
+
+      <image bindtap="addPost" class="plus-image" src="../../images/Greyplus.png" mode="widthFix"></image>
+    </view>
   </header-bar>
 </view>
 
@@ -21,12 +25,18 @@
       Category name 1
     </label>
   </view>
-  <image bindtap="addPost" class="plus-image" src="../../images/Greyplus.png" mode="widthFix"></image>
+  <!--button for adding a new category that allows the user to go directly to the new post page-->
+  <image bindtap="addPost" class="plus-image-category" src="../../images/Greyplus.png" mode="widthFix"></image>
 </view>
 
-<view class="post-container">
+<div class="post-container">
+  <div class="top-right-crown">
+    <!--puts in a gold crown for the first post-->
+    <image src="../../images/Goldcrown.png" class="crown-image"></image>
+  </div>
   <view class="title-table">
     <view class="table-tr">
+
       <view class="table-td">
         <div class="post-details-column-wrap">
           <div class="titles-font">Title of post here: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut lacinia nibh. </div>
@@ -45,13 +55,19 @@
           <div>↓</div>
         </div>
       </view>
+
     </view>
   </view>
-</view>
+</div>
 
-<view class="post-container">
+<div class="post-container">
+  <div class="top-right-crown">
+    <!--puts in a silver crown for the second post-->
+    <image src="../../images/Silvercrown.png" class="crown-image"></image>
+  </div>
   <view class="title-table">
     <view class="table-tr">
+
       <view class="table-td">
         <div class="post-details-column-wrap">
           <div class="titles-font">Title of post here: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut lacinia nibh. </div>
@@ -66,17 +82,23 @@
       <view class="table-td">
         <div class="votes">
           <div>↑</div>
-          <div>20</div>
+          <div>30</div>
           <div>↓</div>
         </div>
       </view>
+
     </view>
   </view>
-</view>
+</div>
 
-<view class="post-container">
+<div class="post-container">
+  <div class="top-right-crown">
+    <!--puts in a bronze crown for the third post-->
+    <image src="../../images/Bronzecrown.png" class="crown-image"></image>
+  </div>
   <view class="title-table">
     <view class="table-tr">
+
       <view class="table-td">
         <div class="post-details-column-wrap">
           <div class="titles-font">Title of post here: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut lacinia nibh. </div>
@@ -91,10 +113,11 @@
       <view class="table-td">
         <div class="votes">
           <div>↑</div>
-          <div>10</div>
+          <div>30</div>
           <div>↓</div>
         </div>
       </view>
+
     </view>
   </view>
-</view>
+</div>
