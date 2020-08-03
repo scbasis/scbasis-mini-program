@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/post/post",
     "pages/new post/new post",
     "pages/category/category",
     "pages/home/home",
-    "pages/post/post",
     "pages/new comment/new comment",
     "pages/search/search"
   ],

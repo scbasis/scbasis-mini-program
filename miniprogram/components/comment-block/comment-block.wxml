@@ -1,23 +1,24 @@
-
 <view class="thread-container">
   <view class="comment-container" style="--depth: {{comment.depth}};">
     <view class="body-container">
       <view class="body-text">
-      {{comment.text}}
+        {{comment.text}}
       </view>
     </view>
+
     <view class="vote-container">
       <button id="{{'down-button-' + comment.id}}" class="downvote-button" size="mini">
         <image class="downvote" mode="WidthFix" src="../../images/pinkDownArrow.png"></image>
       </button>
-      <view class="num-votes">
-        <view class="num">{{comment.votes}}</view>
-      </view>
+
+      <view class="num">{{comment.votes}}</view>
+
       <button id="{{'upvote-button-' + comment.id}}" class="upvote-button" size="mini">
         <image class="upvote" mode="WidthFix" src="../../images/pinkUpArrow.png"></image>
       </button>
+
       <view class="reply-button-container">
-        <button size="mini" class="reply-button">Reply↩</button>
+        <button size="mini" class="reply-button">Reply ↩ </button>
       </view>
       <view class="clr"></view>
     </view>
@@ -26,7 +27,6 @@
   <view class="clr"></view>
 
   <view wx:if="{{recurse==true}}">
-    <comment-block wx:for="{{comment.children}}" wx:key="id" wx:for-item="child" 
-    comment="{{child}}"></comment-block>
+    <comment-block wx:for="{{comment.children}}" wx:key="id" wx:for-item="child" comment="{{child}}"></comment-block>
   </view>
 </view>

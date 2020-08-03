@@ -15,6 +15,7 @@
   background: #47625a;
   width: 50%;
   color: snow; 
+  font-family:sans-serif;
 }
 
 .vote-container {
@@ -33,6 +34,6 @@
   float: right;
   width: 80%;
   font-size: 13px;
-  font-family: inherit;
   color:black;
+  font-family:'Lucida Sans';
 }
