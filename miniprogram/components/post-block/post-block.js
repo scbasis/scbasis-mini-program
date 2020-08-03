@@ -27,6 +27,18 @@ Component({
       })
     },
 
+    upd: function(){
+      const db = wx.cloud.database('scbasiscloud')
+      const pt = this.properties.post
+      db.collection('posts').doc(pt._id).update({
+        data: {
+          upvoted: pt.upvoted,
+          downvoted: pt.downvoted,
+          votes: pt.votes
+        }
+      })
+    },
+
     upv(event) {
       if (this.properties.post.upvoted) {
         this.properties.post.votes--;
@@ -44,13 +56,7 @@ Component({
         post: this.properties.post
       })
 
-      var that = this
-      wx.cloud.callFunction({
-        name: 'update',
-        data: {
-          post: that.properties.post
-        }
-      })
+      this.upd()
     },
 
     downv(event) {
@@ -65,17 +71,12 @@ Component({
           this.properties.post.votes--;
         }
       }
+
       this.setData({
         post: this.properties.post
       })
 
-      var that = this
-      wx.cloud.callFunction({
-        name: 'update',
-        data: {
-          post: that.properties.post
-        }
-      })
+      this.upd()
     }
   }
 })

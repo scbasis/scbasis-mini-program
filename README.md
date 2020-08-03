@@ -51,10 +51,11 @@ Aug 1
 - Research notifications - Kenny
 - Post & new post back + review
 Oliver:
-    - comment buttons redirect
+    - comment buttons redirect 
     - home -> post only works when clicking on title?
     - Back button on new comments
-    - Comment upvoting?
+    --- just use navigator, no js yeet ---
+    - Comment upvoting? (For loop + DFS)
     - Upload/get media/post/comment from cloud
     Kenny:
     - category picker change index
