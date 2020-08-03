@@ -40,15 +40,16 @@ Component({
     },
 
     upv(event) {
-      if (this.properties.post.upvoted) {
-        this.properties.post.votes--;
-        this.properties.post.upvoted = false;
+      pt = this.properties.post
+      if (pt.upvoted) {
+        pt.votes--;
+        pt.upvoted = false;
       } else {
-        this.properties.post.votes++;
-        this.properties.post.upvoted = true;
-        if (this.properties.post.downvoted) {
-          this.properties.post.downvoted = false;
-          this.properties.post.votes++;
+        pt.votes++;
+        pt.upvoted = true;
+        if (pt.downvoted) {
+          pt.downvoted = false;
+          pt.votes++;
         }
       }
 
@@ -60,15 +61,16 @@ Component({
     },
 
     downv(event) {
-      if (this.properties.post.downvoted) {
-        this.properties.post.votes++
-        this.properties.post.downvoted = false;
+      pt = this.properties.post
+      if (pt.downvoted) {
+        pt.votes++
+        pt.downvoted = false;
       } else {
-        this.properties.post.votes--;
-        this.properties.post.downvoted = true;
-        if (this.properties.post.upvoted) {
-          this.properties.post.upvoted = false;
-          this.properties.post.votes--;
+        pt.votes--;
+        pt.downvoted = true;
+        if (pt.upvoted) {
+          pt.upvoted = false;
+          pt.votes--;
         }
       }
 

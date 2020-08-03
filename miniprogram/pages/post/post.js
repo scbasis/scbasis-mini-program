@@ -74,9 +74,76 @@ Page({
     })
   },
 
-  upv: function(event){
+  onUpv: function(event){
     var cm = this.data.post.comments
-    // for (var i = 0; i < comments)
+    for (var i = 0; i < cm.length; i++){
+      cm[i] = this.recUp(event.id,cm[i])
+    }
+    this.setData({
+      comments: cm
+    })
+
+  },
+
+  recUp: function(id, cm){
+    if ('up-button-'+cm.id == id){
+      return upv(cm)
+    }
+    for (var i = 0; i < cm.children.length; i++){
+      cm.children[i] = this.recUp(id,cm.children[i])
+    }
+    return cm
+  },
+
+  upv: function(cm){
+    if (cm.upvoted) {
+      cm.votes--;
+      cm.upvoted = false;
+    } else {
+      cm.votes++;
+      cm.upvoted = true;
+      if (cm.downvoted) {
+        cm.downvoted = false;
+        cm.votes++;
+      }
+    }
+
+    return cm
+  },
+
+  onDownv: function(event){
+    var cm = this.data.post.comments
+    for (var i = 0; i < cm.length; i++){
+      cm[i] = this.recDown(event.id,cm[i])
+    }
+    this.setData({
+      comments: cm
+    })
+  },
+
+  recDown: function(id, cm){
+    if ('down-button-'+cm.id == id){
+      return downv(cm)
+    }
+    for (var i = 0; i < cm.children.length; i++){
+      cm.children[i] = this.recDown(id,cm.children[i])
+    }
+    return cm
+  },
+
+  downv: function(cm){
+    if (cm.downvoted) {
+      cm.votes++
+      cm.downvoted = false;
+    } else {
+      cm.votes--;
+      cm.downvoted = true;
+      if (cm.upvoted) {
+        cm.upvoted = false;
+        cm.votes--;
+      }
+    }
+    return cm
   },
 
   /**

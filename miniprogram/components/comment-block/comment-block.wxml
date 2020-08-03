@@ -13,7 +13,7 @@
 
       <view class="num">{{comment.votes}}</view>
 
-      <button id="{{'upvote-button-' + comment.id}}" class="upvote-button" size="mini">
+      <button id="{{'up-button-' + comment.id}}" class="upvote-button" size="mini">
         <image class="upvote" mode="WidthFix" src="../../images/pinkUpArrow.png"></image>
       </button>
 
