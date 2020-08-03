@@ -74,6 +74,11 @@ Page({
     })
   },
 
+  upv: function(event){
+    var cm = this.data.post.comments
+    // for (var i = 0; i < comments)
+  },
+
   /**
    * Lifecycle function--Called when page load
    */
