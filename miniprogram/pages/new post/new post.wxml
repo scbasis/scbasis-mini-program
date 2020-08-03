@@ -18,7 +18,8 @@
         <view class="picker-container">
           <picker mode="selector" bindchange="bindPickerChange" range="{{categories}}" value="index" class="category-selector">
             <view class="picker">
-              CHOOSE CATEGORY ► {{categories[index]}}
+              <label class="choose-cat-uppercase">choose category ► </label>
+              <label class="category-color-grey">{{categories[index]}}</label>
             </view>
           </picker>
         </view>
@@ -40,10 +41,10 @@
         <view class="footer">
           <view class="footer-left">
             <button size="mini" class="camera-button">
-              <image src="../../images/camera.png" mode="widthFix"></image>
+              <image class="black-image-turns-grey" src="../../images/camera.png" mode="widthFix"></image>
             </button>
             <button size="mini" class="picture-button">
-              <image src="../../images/picture.png" mode="widthFix"></image>
+              <image class="black-image-turns-grey" src="../../images/picture.png" mode="widthFix"></image>
             </button>
             <button size="mini" class="emoji-button">
               <image src="../../images/emoji.png" mode="widthFix"></image>
