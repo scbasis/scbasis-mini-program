@@ -8,18 +8,18 @@
 .comment-container {
   background: white;
   border-radius: 5px;
-  padding: 0 1em;
   margin: 0.5em 0;
   min-height: 4em;
   box-sizing: border-box;
+  position:relative;
 }
 
 .body-text {
   display: block;
-  padding-top: 0.5em;
-  font-size: 13px;
+  padding: 0.5em;
+  font-size: 14px;
   color:#000;
-  font-family:inherit;
+  font-family:'Lucida Sans';
 }
 
 .reply-button-container {
@@ -27,18 +27,26 @@
 }
 
 .reply-button {
-  font-size: 0.8em !important;
+  font-size: 0.7em !important;
   font-weight: 700 !important;
-  padding: 0 0.1em !important;
+  margin-top:4px;
   vertical-align: middle;
+  color:#e99692;
 }
 
 .vote-container {
   display: block;
   overflow: hidden;
+  position:absolute;
+  bottom:0px;
+  right:1px;
 }
 
-.upvote-button, .downvote-button, .num-votes {
+.reply-button{
+  
+}
+
+.upvote-button, .downvote-button, .num {
   float: right;
   width: 20px;
   height: 2em;
@@ -47,6 +55,8 @@
 .num {
   text-align: center;
   margin-top: 2px;
+  color:#E99692;
+  font-size:0.8em;
 }
 
 .upvote-button, .downvote-button {

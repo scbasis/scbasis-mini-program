@@ -11,7 +11,9 @@
   color:#fff;
   border-width:thick;
   border-color:#47625a;
-  text-align:center;
+  font-family:'Lucida Sans';
+  font-size:15px;
+  word-spacing: 1px;
 }
 
 .backButton:active {
@@ -22,13 +24,13 @@
   text-align:center;
 }
 
-.buttonText {
-  margin-left:5px;
+.button-text{
+
 }
 
 .main-container {
-  margin: 1em;
-  margin-top: 55px;
+  margin: 16px;
+  margin-top: 85px;
 }
 
 .post-container {
@@ -43,21 +45,27 @@
 
 .title {
   position: absolute;
-  top: -0.6em;
-  padding: 0.2em;
-  padding-left: 0.8em;
+  top: -1.8em;
+  left:0px;
+  padding: 0.8em;
   background:#47625a;
-  width: 50%;
-  color: snow; 
+  width: 80%;
+  color: white; 
+  font-family:'Lucida Sans';
+  font-size:17px;
+  word-spacing: 1px;
+  letter-spacing: 1px;
 }
 
-.content-container {
+.post-content-container {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
+  padding-top:5px;
+  padding-right:8px;
 }
 
-.vote-container {
+.post-vote-container {
   padding-top: 0.9em;
   flex: 0 1 3em;
 }
@@ -71,6 +79,8 @@
   padding: 0.2em 0.2em;
   vertical-align: middle;
   text-align: center;
+  font-size:0.8em;
+  color:#e8a5a6
 }
 .upvote-button, .downvote-button {
   display: inline;
@@ -89,10 +99,14 @@
 .body-container {
   padding-top: 0.8em;
   flex: 3 1 80%;
-  font-size: 13px;
   color:#000;
 }
 
+.body-text{
+  font-family:'Lucida Sans';
+  font-size:14px;
+  word-spacing: 1px;
+}
 .swiper-container {
   width: 100%;
   padding-top: 100%;
@@ -137,5 +151,8 @@ navigator {
 
 .comments-header {
   padding: 0.2em;
-  margin-left: 1em;
+  margin-left: 5px;
+  font-family:'Lucida Sans';
+  font-size:16px;
+  font-weight: 700;
 }

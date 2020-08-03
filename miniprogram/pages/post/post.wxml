@@ -2,28 +2,28 @@
   <header-bar>
     <navigator class="backButton" url="../home/home">
       <p class="buttonText">
-      Back
+        Back
       </p>
     </navigator>
   </header-bar>
 
   <view class="main-container">
-  
-      <!-- using first placeholder post from home.js -->
+
+    <!-- using first placeholder post from home.js -->
     <view class="post-container">
+    <!--help, title box needs to adjust to the length of the title-->
       <view class="title">
         {{post.title}}
       </view>
-
-      <view class="content-container">
-        <view class="vote-container">
+      <view class="post-content-container">
+        <view class="post-vote-container">
           <up-arrow post="{{post}}"></up-arrow>
           <view class="num-votes">{{post.votes}}</view>
           <down-arrow post="{{post}}"></down-arrow>
         </view>
         <view class="body-container">
           <view class="body-text">
-          {{post.body}}
+            {{post.body}}
           </view>
           <view class="swiper-container">
             <swiper class="swiper" indicator-dots="true">
@@ -35,20 +35,21 @@
                   <view wx:if="{{item.type == 'video'}}">
                     <video src="{{item.source}}"></video>
                   </view>
-                  
+
                 </swiper-item>
               </block>
-            </swiper> 
+            </swiper>
           </view>
         </view>
       </view>
-      
+
       <view class="footer-container">
         <view class="comment-button-container">
           <button size="mini" class="comment-button">Comment↩</button>
         </view>
         <view class="info-container">
-          Posted by <navigator>{{post.user.name}}</navigator> on {{post.time.year}}/{{post.time.month}}/{{post.time.day}} {{post.time.hour}}:{{post.time.minute}}
+          Posted by
+          <navigator>{{post.user.name}}</navigator> on {{post.time.year}}/{{post.time.month}}/{{post.time.day}} {{post.time.hour}}:{{post.time.minute}}
         </view>
         <view class="clr"></view>
       </view>
@@ -56,8 +57,7 @@
 
     <view class="comments-container">
       <view class="comments-header">Comments</view>
-      <comment-block wx:for="{{comments}}" wx:key="id" wx:for-item="comment"
-      comment="{{comment}}"></comment-block>
+      <comment-block wx:for="{{comments}}" wx:key="id" wx:for-item="comment" comment="{{comment}}"></comment-block>
     </view>
   </view>
 
