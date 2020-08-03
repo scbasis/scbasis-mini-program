@@ -1,4 +1,8 @@
 .backButton {
+  width: 4em;
+  font-size: 1.1em;
+  padding: 0.3em 0.1em;
+  border-radius: 0.2em;
   margin-top: 5px;
   margin-left: 8px;
   background: #47625a;

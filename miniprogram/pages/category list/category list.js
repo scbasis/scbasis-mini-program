@@ -11,6 +11,11 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
+  backHome: function(){
+    wx.redirectTo({
+      url: '../home/home',
+    })
+  },
   onLoad: function (options) {
 
   },

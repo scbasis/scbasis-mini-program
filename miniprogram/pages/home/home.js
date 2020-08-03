@@ -130,10 +130,9 @@ Page({
     }})
     console.log(app.globalData.loadnum)
   },
-
-  addPost: function(){
-    wx.navigateTo({
-      url: '../new post/new post'
+  toSearch: function(){
+    wx.redirectTo({
+      url: '../search/search',
     })
-  }
+  },
 })

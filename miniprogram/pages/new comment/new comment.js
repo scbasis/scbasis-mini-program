@@ -34,11 +34,6 @@ Page({
     }
   },
 
-  backHome: function(){
-    wx.redirectTo({
-      url: '../home/home',
-    })
-  },
 
   /**
    * Lifecycle function--Called when page load

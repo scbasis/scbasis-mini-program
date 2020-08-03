@@ -13,16 +13,16 @@
       </li>
       <li class="search-container">
         <!--searchBox+searchButton-->
-        <input type="search" placeholder="Search..."></input>
+        <input type="search" placeholder="Search..." bindfocus="toSearch"></input>
         <button >
           <icon type="search"></icon>
         </button>
       </li>
 
       <li>
-        <button class="plus-button" size="mini">
-          <image bindtap="addPost" class="plus-image" src="../../images/Greyplus.png" mode="widthFix"></image>
-        </button>
+        <navigator class="plus-button" url="../new post/new post">
+          <image class="plus-image" src="../../images/Greyplus.png" mode="widthFix"></image>
+        </navigator>
       </li>
     </ul>
 

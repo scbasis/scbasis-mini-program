@@ -1,6 +1,10 @@
 /* miniprogram/pages/post/post.wxss */
 
 .backButton {
+  width: 4em;
+  font-size: 1.1em;
+  padding: 0.3em 0.1em;
+  border-radius: 0.2em;
   margin-top: 5px;
   margin-left: 8px;
   background: #47624a;
@@ -13,7 +17,7 @@
 .backButton:active {
   background: #fff;
   color:#47624a;
-  border-width:4rpx;
+  border-width:4px;
   border-color:#47624a;
   text-align:center;
 }

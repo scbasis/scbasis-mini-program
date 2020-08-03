@@ -1,21 +1,27 @@
 <header-bar class="header">
-  <ul class="header-inner-container">
-    <li class="cancel-container">
-     <button size="mini" class="cancel-button">
+  <view class="header-inner-container">
+    <view class="cancel-container">
+      <navigator class="cancel-nav" url="../home/home">
       Cancel
-      </button>
-    </li>
-    <li class="search-container">
-      <search></search>
-    </li>
-  </ul>
+      </navigator>
+    </view>
+    <form class="search-form">
+      <view class="search-container">
+        <input type="search" placeholder="Search..." auto-focus class="search-input"></input>
+        <button size="mini" form-type="submit" class="search-button">
+          <icon type="search" class="search-icon"></icon>
+        </button>
+      </view>
+    </form>
+    <view class="clr"></view>
+  </view>
 </header-bar>
 
 <view class="results-container">
-  <view class="categories-link h2">
+  <navigator class="categories-link h2" url="../category list/category list">
     <image src="../../images/cat.jpg" mode="widthFix" class="cat-image"></image>
     Show all categories...
-  </view>
+  </navigator>
   <view class="categories-h2 h2">
     Related categories:
   </view>
