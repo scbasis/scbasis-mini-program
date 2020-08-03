@@ -30,10 +30,10 @@
               <block wx:for="{{post.media}}" wx:for-item="item" wx:key="id">
                 <swiper-item>
                   <view wx:if="{{item.type == 'image'}}">
-                    <image mode="widthFix" src="{{item.source}}"></image>
+                    <image class="swiper-images" mode="aspectFit" src="{{item.source}}"></image>
                   </view>
                   <view wx:if="{{item.type == 'video'}}">
-                    <video src="{{item.source}}"></video>
+                    <video class="swiper-video" src="{{item.source}}" autoplay show-mute-btn></video>
                   </view>
 
                 </swiper-item>
@@ -48,8 +48,7 @@
           <button size="mini" class="comment-button">Comment↩</button>
         </view>
         <view class="info-container">
-          Posted by
-          <navigator>{{post.user.name}}</navigator> on {{post.time.year}}/{{post.time.month}}/{{post.time.day}} {{post.time.hour}}:{{post.time.minute}}
+          Posted by {{post.user.name}} on {{post.time.year}}/{{post.time.month}}/{{post.time.day}} {{post.time.hour}}:{{post.time.minute}}
         </view>
         <view class="clr"></view>
       </view>

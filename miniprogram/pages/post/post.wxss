@@ -3,7 +3,7 @@
 .backButton {
   width: 4em;
   font-size: 1.1em;
-  padding: 0.5em 0.2em;
+  padding: 0.3em 0.1em;
   border-radius: 0.2em;
   margin-top: 5px;
   margin-left: 8px;
@@ -14,6 +14,7 @@
   font-family:'Lucida Sans';
   font-size:15px;
   word-spacing: 1px;
+  text-align:center;
 }
 
 .backButton:active {
@@ -22,10 +23,6 @@
   border-width:4rpx;
   border-color:#47625a;
   text-align:center;
-}
-
-.button-text{
-
 }
 
 .main-container {
@@ -68,12 +65,15 @@
 .post-vote-container {
   padding-top: 0.9em;
   flex: 0 1 3em;
+  
 }
 
 .upvote-button, .downvote-button, num-votes {
   float: top;
   height: 33%;
 }
+
+
 
 .num-votes {
   padding: 0.2em 0.2em;
@@ -99,6 +99,7 @@
 .body-container {
   padding-top: 0.8em;
   flex: 3 1 80%;
+  font-size: 13px;
   color:#000;
 }
 
@@ -107,6 +108,7 @@
   font-size:14px;
   word-spacing: 1px;
 }
+
 .swiper-container {
   width: 100%;
   padding-top: 100%;
@@ -120,6 +122,14 @@
   bottom: 0;
   left: 0;
   height: 100%;
+}
+
+.swiper-images {
+  width: 100%;
+}
+
+.swiper-video {
+  width: 100%;
 }
 
 .comment-button-container {
@@ -140,11 +150,6 @@
   color: gray;
 }
 
-navigator {
-  display: inline;
-  color: rgb(97, 134, 255);
-}
-
 .comments-container {
   margin-left: -1em;
 }
@@ -155,4 +160,5 @@ navigator {
   font-family:'Lucida Sans';
   font-size:16px;
   font-weight: 700;
+  margin-left: 1em;
 }
