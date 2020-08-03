@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/category/category",
     "pages/new post/new post",
+    "pages/category/category",
     "pages/home/home",
     "pages/post/post",
     "pages/new comment/new comment",

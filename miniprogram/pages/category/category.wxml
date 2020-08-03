@@ -9,7 +9,7 @@
           Back
         </p>
       </button>
-
+      <!--this button is for adding a new post and should jump to new post page-->
       <image bindtap="addPost" class="plus-image" src="../../images/Greyplus.png" mode="widthFix"></image>
     </view>
   </header-bar>
@@ -25,7 +25,7 @@
       Category name 1
     </label>
   </view>
-  <!--button for adding a new category that allows the user to go directly to the new post page-->
+  <!--button for adding a new category that allows the user to go directly to the new post page with the category set to the category name before they enter the page-->
   <image bindtap="addPost" class="plus-image-category" src="../../images/Greyplus.png" mode="widthFix"></image>
 </view>
 
@@ -67,7 +67,7 @@
   </div>
   <view class="title-table">
     <view class="table-tr">
-
+    
       <view class="table-td">
         <div class="post-details-column-wrap">
           <div class="titles-font">Title of post here: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut lacinia nibh. </div>
