@@ -33,7 +33,7 @@
                     <image class="swiper-images" mode="aspectFit" src="{{item.source}}"></image>
                   </view>
                   <view wx:if="{{item.type == 'video'}}">
-                    <video class="swiper-video" src="{{item.source}}" autoplay show-mute-btn></video>
+                    <video class="swiper-video" src="{{item.source}}" show-mute-btn></video>
                   </view>
 
                 </swiper-item>
