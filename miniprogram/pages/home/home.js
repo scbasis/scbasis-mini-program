@@ -10,7 +10,38 @@ Page({
     userInfo: {}, 
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    posts: []
+    posts: [],
+    placeholderPost: { //for debugging
+      title: "Interesting Title 1",
+      body: "Body text here- Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm asldfkja iasudfh asiufh auishoqw q wofjh asdofiuh aushf weiourh sodif, sdog! asidf akdj fijawef.",
+      media: [
+        {
+          type: "image",
+          id: "m0001",
+          source: "../../images/placeholders/2meirl4meirl.jpg"
+        },
+        {
+          type: "video",
+          id: "m0002",
+          source: "../../images/placeholders/yesyesyesyesno.mp4"
+        }
+      ],
+      votes: 420,
+      id: "p0000",
+      upvoted: "false",
+      downvoted: "false",
+      user: { // link to contact page?
+        name: "gayboi",
+      },
+      url: "../../pages/post/post",
+      time: {
+        year: "2020",
+        month: "7",
+        day: "30",
+        hour: "20",
+        minute: "01"
+      }
+    }
   },
 
   /**

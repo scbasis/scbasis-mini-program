@@ -44,9 +44,11 @@
   <!-- <scroll-view scroll-y> -->
   <block wx:for="{{posts}}" wx:for-item="post" wx:key="id" class="posts-scroll">
     <view class="outer-post-container">
-      <post-block post="{{post}}"></post-block>
+      <post-block post="{{post}}"></post-block> 
     </view>
   </block>
+
+ 
   <!-- </scroll-view> -->
 
 </view>

@@ -27,6 +27,7 @@ Page({
       user: { // link to contact page?
         name: "gayboi",
       },
+      url: "../../pages/post/post",
       time: {
         year: "2020",
         month: "7",
@@ -68,11 +69,6 @@ Page({
     }
   },
 
-  backHome: function(){
-    wx.redirectTo({
-      url: '../home/home',
-    })
-  },
 
   onUpv: function(event){
     var cm = this.data.post.comments

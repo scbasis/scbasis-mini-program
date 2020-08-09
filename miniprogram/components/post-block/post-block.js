@@ -21,11 +21,6 @@ Component({
    * Component methods
    */
   methods: {
-    toPost: function () {
-      wx.navigateTo({
-        url: '../post/post'
-      })
-    },
 
     upd: function(){
       const db = wx.cloud.database('scbasiscloud')
