@@ -5,17 +5,109 @@ Page({
    * Page initial data
    */
   data: {
-
+    posts: [
+      {
+        title: "Placehoder1 title: Interesting things happened but idrk what happened",
+        body: "Placeholder body: - Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm asldfkja iasudfh asiufh auishoqw q wofjh asdofiuh aushf weiourh sodif, sdog! asidf akdj fijawef.",
+        media: [
+          {
+            type: "image",
+            id: "m0001",
+            source: "../../images/placeholders/2meirl4meirl.jpg"
+          },
+          {
+            type: "video",
+            id: "m0002",
+            source: "../../images/placeholders/yesyesyesyesno.mp4"
+          }
+        ],
+        votes: 420,
+        id: "p0000",
+        upvoted: "false",
+        downvoted: "false",
+        user: { // link to contact page?
+          name: "gayboi",
+        },
+        url: "../../pages/post/post",
+        time: {
+          year: "2020",
+          month: "7",
+          day: "30",
+          hour: "20",
+          minute: "01"
+        },
+        crown: "gold"
+      },
+      {
+        title: "Placehoder2 title: Interesting things happened but idrk what happened",
+        body: "Placeholder body: - Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm asldfkja iasudfh asiufh auishoqw q wofjh asdofiuh aushf weiourh sodif, sdog! asidf akdj fijawef.",
+        media: [
+          {
+            type: "image",
+            id: "m0001",
+            source: "../../images/placeholders/2meirl4meirl.jpg"
+          },
+          {
+            type: "video",
+            id: "m0002",
+            source: "../../images/placeholders/yesyesyesyesno.mp4"
+          }
+        ],
+        votes: 420,
+        id: "p0000",
+        upvoted: "false",
+        downvoted: "false",
+        user: { // link to contact page?
+          name: "notgayboi",
+        },
+        url: "../../pages/post/post",
+        time: {
+          year: "2020",
+          month: "8",
+          day: "3",
+          hour: "20",
+          minute: "01"
+        },
+        crown: "silver"
+      },
+      {
+        title: "Placehoder3 title: Interesting things happened but idrk what happened",
+        body: "Placeholder body: - Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm asldfkja iasudfh asiufh auishoqw q wofjh asdofiuh aushf weiourh sodif, sdog! asidf akdj fijawef.",
+        media: [
+          {
+            type: "image",
+            id: "m0001",
+            source: "../../images/placeholders/2meirl4meirl.jpg"
+          },
+          {
+            type: "video",
+            id: "m0002",
+            source: "../../images/placeholders/yesyesyesyesno.mp4"
+          }
+        ],
+        votes: 420,
+        id: "p0000",
+        upvoted: "false",
+        downvoted: "false",
+        user: { // link to contact page?
+          name: "gayboi",
+        },
+        url: "../../pages/post/post",
+        time: {
+          year: "2020",
+          month: "8",
+          day: "1",
+          hour: "20",
+          minute: "01"
+        },
+        crown: "bronze"
+      }
+    ]
   },
 
   /**
    * Lifecycle function--Called when page load
    */
-  backHome: function(){
-    wx.redirectTo({
-      url: '../home/home',
-    })
-  },
   onLoad: function (options) {
 
   },

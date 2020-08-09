@@ -1,0 +1,32 @@
+<div class="post-container">
+  <div class="top-right-crown">
+    <!--puts in a gold crown for the first post-->
+    <image wx:if="{{post.crown == 'gold'}}"src="../../images/Goldcrown.png" class="crown-image"></image>
+    <image wx:if="{{post.crown == 'silver'}}"src="../../images/Silvercrown.png" class="crown-image"></image>
+    <image wx:if="{{post.crown == 'bronze'}}"src="../../images/Bronzecrown.png" class="crown-image"></image>
+  </div>
+  <view class="title-table">
+    <view class="table-tr">
+
+      <view class="table-td">
+        <div class="post-details-column-wrap">
+          <div class="titles-font">{{post.title}} </div>
+          <div class="author-time-comments">{{post.user.name}} {{post.time.year}}/{{post.time.month}}/{{post.time.day}} em comments</div>
+        </div>
+      </view>
+
+      <view class="table-td">
+        <image class="small-thumbnail-preview"></image>
+      </view>
+
+      <view class="table-td">
+        <div class="votes">
+          <up-arrow post="{{post}}" bindupv="upv"></up-arrow>
+          <view class="num-votes">{{post.votes}}</view>
+          <down-arrow post="{{post}}" binddownv="downv"></down-arrow>
+        </div>
+      </view>
+
+    </view>
+  </view>
+</div>

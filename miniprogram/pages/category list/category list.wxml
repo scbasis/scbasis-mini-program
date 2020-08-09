@@ -4,13 +4,15 @@
 <view class="container">
   <header-bar>
     <view class="flex-container">
-      <button class="backButton" size="mini"  bindtap="backHome">
+      <navigator url="../search/search" class="backButton" size="mini"  bindtap="backHome">
         <p class="buttonText">
           Back
         </p>
-      </button>
+      </navigator>
       <!--this button is for adding a new post and should jump to new post page-->
-      <image bindtap="addPost" class="plus-image" src="../../images/Greyplus.png" mode="widthFix"></image>
+      <navigator url="../new post/new post" class="new-post-nav">
+        <image bindtap="addPost" class="plus-image" src="../../images/Greyplus.png" mode="widthFix"></image>
+      </navigator>
     </view>
   </header-bar>
 </view>
@@ -29,95 +31,9 @@
   <image bindtap="addPost" class="plus-image-category" src="../../images/Greyplus.png" mode="widthFix"></image>
 </view>
 
-<div class="post-container">
-  <div class="top-right-crown">
-    <!--puts in a gold crown for the first post-->
-    <image src="../../images/Goldcrown.png" class="crown-image"></image>
-  </div>
-  <view class="title-table">
-    <view class="table-tr">
-
-      <view class="table-td">
-        <div class="post-details-column-wrap">
-          <div class="titles-font">Title of post here: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut lacinia nibh. </div>
-          <div class="author-time-comments">Author 8/1/2020 70 comments</div>
-        </div>
-      </view>
-
-      <view class="table-td">
-        <image class="small-thumbnail-preview">placeholder</image>
-      </view>
-
-      <view class="table-td">
-        <div class="votes">
-          <div>↑</div>
-          <div>30</div>
-          <div>↓</div>
-        </div>
-      </view>
-
-    </view>
+<block wx:for="{{posts}}" wx:for-item="post" wx:key="id" class="posts-scroll">
+  <view class="outer-post-container">
+    <post-block-small post="{{post}}"></post-block-small> 
   </view>
-</div>
+</block>
 
-<div class="post-container">
-  <div class="top-right-crown">
-    <!--puts in a silver crown for the second post-->
-    <image src="../../images/Silvercrown.png" class="crown-image"></image>
-  </div>
-  <view class="title-table">
-    <view class="table-tr">
-    
-      <view class="table-td">
-        <div class="post-details-column-wrap">
-          <div class="titles-font">Title of post here: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut lacinia nibh. </div>
-          <div class="author-time-comments">Author 8/1/2020 70 comments</div>
-        </div>
-      </view>
-
-      <view class="table-td">
-        <image class="small-thumbnail-preview">placeholder</image>
-      </view>
-
-      <view class="table-td">
-        <div class="votes">
-          <div>↑</div>
-          <div>30</div>
-          <div>↓</div>
-        </div>
-      </view>
-
-    </view>
-  </view>
-</div>
-
-<div class="post-container">
-  <div class="top-right-crown">
-    <!--puts in a bronze crown for the third post-->
-    <image src="../../images/Bronzecrown.png" class="crown-image"></image>
-  </div>
-  <view class="title-table">
-    <view class="table-tr">
-
-      <view class="table-td">
-        <div class="post-details-column-wrap">
-          <div class="titles-font">Title of post here: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut lacinia nibh. </div>
-          <div class="author-time-comments">Author 8/1/2020 70 comments</div>
-        </div>
-      </view>
-
-      <view class="table-td">
-        <image class="small-thumbnail-preview">placeholder</image>
-      </view>
-
-      <view class="table-td">
-        <div class="votes">
-          <div>↑</div>
-          <div>30</div>
-          <div>↓</div>
-        </div>
-      </view>
-
-    </view>
-  </view>
-</div>

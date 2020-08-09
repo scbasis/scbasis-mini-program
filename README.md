@@ -62,9 +62,18 @@ Oliver:
     - Post info (user, date)
 
 Aug 8
-- Profile page & Notifications design
-- Categories page front
-- Categories list back + review
+- Category - Anthea
+- Profile page design - Sam
+    - name
+    - school, birthday kinda
+    - posts
+    - comments
+    - statistics
+    - link to contact
+- More notifications research - Kenny
+- component small post, new category page - Kenny
+- Categories list back + review - oliver
+
 
 Aug 15
 - Profile & notifications front

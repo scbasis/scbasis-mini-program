@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "up-arrow": "../up-arrow/up-arrow",
+    "down-arrow": "../down-arrow/down-arrow"
+  }
+}
