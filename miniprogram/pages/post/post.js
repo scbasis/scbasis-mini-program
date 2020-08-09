@@ -33,39 +33,39 @@ Page({
         day: "30",
         hour: "20",
         minute: "01"
-      }
-    },
-    comments: [{
-      text: "This is a comment",
-      votes: 11,
-      depth: 0,
-      id: "c0000",
-      children: [{
-        text: "This is a reply to a comment",
-        votes: 6,
-        depth: 1, 
-        id: "c0001",
+      },
+      comments: [{
+        text: "This is a comment",
+        votes: 11,
+        depth: 0,
+        id: "c0000",
         children: [{
-          text: "This is the third",
-          votes: -1,
-          depth: 2, 
-          id: "c0002",
+          text: "This is a reply to a comment",
+          votes: 6,
+          depth: 1, 
+          id: "c0001",
+          children: [{
+            text: "This is the third",
+            votes: -1,
+            depth: 2, 
+            id: "c0002",
+            children: []
+          }]
+        }]
+      }, {
+        text: "Comment, but less popular",
+        votes: 6,
+        depth: 0, 
+        id: "c0003",
+        children: [{
+          text: "No one likes you",
+          votes: -12,
+          depth: 1,
+          id: "c0004",
           children: []
         }]
       }]
-    }, {
-      text: "Comment, but less popular",
-      votes: 6,
-      depth: 0, 
-      id: "c0003",
-      children: [{
-        text: "No one likes you",
-        votes: -12,
-        depth: 1,
-        id: "c0004",
-        children: []
-      }]
-    }]
+    }
   },
 
   backHome: function(){
@@ -87,7 +87,7 @@ Page({
 
   recUp: function(id, cm){
     if ('up-button-'+cm.id == id){
-      return upv(cm)
+      return upvc(cm)
     }
     for (var i = 0; i < cm.children.length; i++){
       cm.children[i] = this.recUp(id,cm.children[i])
@@ -95,7 +95,7 @@ Page({
     return cm
   },
 
-  upv: function(cm){
+  upvc: function(cm){
     if (cm.upvoted) {
       cm.votes--;
       cm.upvoted = false;
@@ -123,7 +123,7 @@ Page({
 
   recDown: function(id, cm){
     if ('down-button-'+cm.id == id){
-      return downv(cm)
+      return downvc(cm)
     }
     for (var i = 0; i < cm.children.length; i++){
       cm.children[i] = this.recDown(id,cm.children[i])
@@ -131,7 +131,7 @@ Page({
     return cm
   },
 
-  downv: function(cm){
+  downvc: function(cm){
     if (cm.downvoted) {
       cm.votes++
       cm.downvoted = false;
@@ -144,6 +144,60 @@ Page({
       }
     }
     return cm
+  },
+
+  upd: function(){
+    const db = wx.cloud.database('scbasiscloud')
+    const pt = this.properties.post
+    db.collection('posts').doc(pt._id).update({
+      data: {
+        upvoted: pt.upvoted,
+        downvoted: pt.downvoted,
+        votes: pt.votes
+      }
+    })
+  },
+
+  upv(event) {
+    pt = this.properties.post
+    if (pt.upvoted) {
+      pt.votes--;
+      pt.upvoted = false;
+    } else {
+      pt.votes++;
+      pt.upvoted = true;
+      if (pt.downvoted) {
+        pt.downvoted = false;
+        pt.votes++;
+      }
+    }
+
+    this.setData({
+      post: this.properties.post
+    })
+
+    this.upd()
+  },
+
+  downv(event) {
+    pt = this.properties.post
+    if (pt.downvoted) {
+      pt.votes++
+      pt.downvoted = false;
+    } else {
+      pt.votes--;
+      pt.downvoted = true;
+      if (pt.upvoted) {
+        pt.upvoted = false;
+        pt.votes--;
+      }
+    }
+
+    this.setData({
+      post: this.properties.post
+    })
+
+    this.upd()
   },
 
   /**

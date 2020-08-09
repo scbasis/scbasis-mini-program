@@ -11,27 +11,31 @@ Page({
       votes: 420,
       id: "p0000",
       upvoted: "false",
-      downvoted: "false"
-    },
-    comment: {
-      text: "This is a comment",
-      votes: 11,
-      depth: 0,
-      id: "c0000",
-      children: [{
-        text: "This is a reply to a comment",
-        votes: 6,
-        depth: 1, 
-        id: "c0001",
+      downvoted: "false",
+      comment: {
+        text: "This is a comment",
+        votes: 11,
+        depth: 0,
+        id: "c0000",
         children: [{
-          text: "This is the third",
-          votes: -1,
-          depth: 2, 
-          id: "c0002",
-          children: []
+          text: "This is a reply to a comment",
+          votes: 6,
+          depth: 1, 
+          id: "c0001",
+          children: [{
+            text: "This is the third",
+            votes: -1,
+            depth: 2, 
+            id: "c0002",
+            children: []
+          }]
         }]
-      }]
+      }
     }
+  },
+
+  createComment: function(){
+
   },
 
 
