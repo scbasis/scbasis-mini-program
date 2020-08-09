@@ -6,67 +6,67 @@ Page({
    */
   data: {
     post: { // using first placeholder post from home.js
-      title: "Interesting Title 1",
-      body: "Body text here- Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm asldfkja iasudfh asiufh auishoqw q wofjh asdofiuh aushf weiourh sodif, sdog! asidf akdj fijawef.",
-      media: [
-        {
-          type: "image",
-          id: "m0001",
-          source: "../../images/placeholders/2meirl4meirl.jpg"
-        },
-        {
-          type: "video",
-          id: "m0002",
-          source: "../../images/placeholders/yesyesyesyesno.mp4"
-        }
-      ],
-      votes: 420,
-      id: "p0000",
-      upvoted: "false",
-      downvoted: "false",
-      user: { // link to contact page?
-        name: "gayboi",
-      },
-      url: "../../pages/post/post",
-      time: {
-        year: "2020",
-        month: "7",
-        day: "30",
-        hour: "20",
-        minute: "01"
-      }
-    },
-    comments: [{
-      text: "This is a comment",
-      votes: 11,
-      depth: 0,
-      id: "c0000",
-      children: [{
-        text: "This is a reply to a comment",
-        votes: 6,
-        depth: 1, 
-        id: "c0001",
-        children: [{
-          text: "This is the third",
-          votes: -1,
-          depth: 2, 
-          id: "c0002",
-          children: []
-        }]
-      }]
-    }, {
-      text: "Comment, but less popular",
-      votes: 6,
-      depth: 0, 
-      id: "c0003",
-      children: [{
-        text: "No one likes you",
-        votes: -12,
-        depth: 1,
-        id: "c0004",
-        children: []
-      }]
-    }]
+      // title: "Interesting Title 1",
+      // body: "Body text here- Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm asldfkja iasudfh asiufh auishoqw q wofjh asdofiuh aushf weiourh sodif, sdog! asidf akdj fijawef.",
+      // media: [
+      //   {
+      //     type: "image",
+      //     id: "m0001",
+      //     source: "../../images/placeholders/2meirl4meirl.jpg"
+      //   },
+      //   {
+      //     type: "video",
+      //     id: "m0002",
+      //     source: "../../images/placeholders/yesyesyesyesno.mp4"
+      //   }
+      // ],
+      // votes: 420,
+      // id: "p0000",
+      // upvoted: "false",
+      // downvoted: "false",
+      // user: { // link to contact page?
+      //   name: "gayboi",
+      // },
+      // url: "../../pages/post/post",
+      // time: {
+      //   year: "2020",
+      //   month: "7",
+      //   day: "30",
+      //   hour: "20",
+      //   minute: "01"
+      // },
+      // comments: [{
+      //   text: "This is a comment",
+      //   votes: 11,
+      //   depth: 0,
+      //   id: "c0000",
+      //   children: [{
+      //     text: "This is a reply to a comment",
+      //     votes: 6,
+      //     depth: 1, 
+      //     id: "c0001",
+      //     children: [{
+      //       text: "This is the third",
+      //       votes: -1,
+      //       depth: 2, 
+      //       id: "c0002",
+      //       children: []
+      //     }]
+      //   }]
+      // }, {
+      //   text: "Comment, but less popular",
+      //   votes: 6,
+      //   depth: 0, 
+      //   id: "c0003",
+      //   children: [{
+      //     text: "No one likes you",
+      //     votes: -12,
+      //     depth: 1,
+      //     id: "c0004",
+      //     children: []
+      //   }]
+      // }]
+    }
   },
 
 
@@ -83,7 +83,7 @@ Page({
 
   recUp: function(id, cm){
     if ('up-button-'+cm.id == id){
-      return upv(cm)
+      return upvc(cm)
     }
     for (var i = 0; i < cm.children.length; i++){
       cm.children[i] = this.recUp(id,cm.children[i])
@@ -91,7 +91,7 @@ Page({
     return cm
   },
 
-  upv: function(cm){
+  upvc: function(cm){
     if (cm.upvoted) {
       cm.votes--;
       cm.upvoted = false;
@@ -119,7 +119,7 @@ Page({
 
   recDown: function(id, cm){
     if ('down-button-'+cm.id == id){
-      return downv(cm)
+      return downvc(cm)
     }
     for (var i = 0; i < cm.children.length; i++){
       cm.children[i] = this.recDown(id,cm.children[i])
@@ -127,7 +127,7 @@ Page({
     return cm
   },
 
-  downv: function(cm){
+  downvc: function(cm){
     if (cm.downvoted) {
       cm.votes++
       cm.downvoted = false;
@@ -142,11 +142,73 @@ Page({
     return cm
   },
 
+  upd: function(){
+    const db = wx.cloud.database('scbasiscloud')
+    const pt = this.properties.post
+    db.collection('posts').doc(pt._id).update({
+      data: {
+        upvoted: pt.upvoted,
+        downvoted: pt.downvoted,
+        votes: pt.votes
+      }
+    })
+  },
+
+  upv(event) {
+    pt = this.properties.post
+    if (pt.upvoted) {
+      pt.votes--;
+      pt.upvoted = false;
+    } else {
+      pt.votes++;
+      pt.upvoted = true;
+      if (pt.downvoted) {
+        pt.downvoted = false;
+        pt.votes++;
+      }
+    }
+
+    this.setData({
+      post: this.properties.post
+    })
+
+    this.upd()
+  },
+
+  downv(event) {
+    pt = this.properties.post
+    if (pt.downvoted) {
+      pt.votes++
+      pt.downvoted = false;
+    } else {
+      pt.votes--;
+      pt.downvoted = true;
+      if (pt.upvoted) {
+        pt.upvoted = false;
+        pt.votes--;
+      }
+    }
+
+    this.setData({
+      post: this.properties.post
+    })
+
+    this.upd()
+  },
+
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    
+    const db = wx.cloud.database('scbasiscloud')
+    var that = this
+    db.collection('posts').doc(options.id).get({
+      success: function(res){
+        that.setData({
+          post: res
+        })
+      }
+    })
   },
 
   /**

@@ -151,7 +151,8 @@ Page({
             hour: date.getHours().toString().padStart(2, '0'),
             minute: date.getMinutes().toString().padStart(2, '0')
           },
-          user: this.userInfo.nickName
+          user: this.userInfo.nickName,
+          comments: []
         }
       })
     }})
