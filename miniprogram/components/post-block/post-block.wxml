@@ -1,5 +1,5 @@
 <view class="post-container">
-  <navigator url="{{post.url}}" class="title" bindtap="toPost">
+  <navigator url="../post/post?id={{post._id}}" class="title" bindtap="toPost">
     <!-- post.url - add to post object -->
     {{post.title}}
   </navigator>
@@ -8,7 +8,7 @@
     <view class="num-votes">{{post.votes}}</view>
     <down-arrow post="{{post}}" binddownv="downv"></down-arrow>
   </view>
-  <navigator url="{{post.url}}"  class="body-container">
+  <navigator url="../post/post?id={{post._id}}"  class="body-container">
     <view class="body-text">
     {{post.body}}
     </view>

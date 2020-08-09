@@ -6,66 +6,66 @@ Page({
    */
   data: {
     post: { // using first placeholder post from home.js
-      title: "Interesting Title 1",
-      body: "Body text here- Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm asldfkja iasudfh asiufh auishoqw q wofjh asdofiuh aushf weiourh sodif, sdog! asidf akdj fijawef.",
-      media: [
-        {
-          type: "image",
-          id: "m0001",
-          source: "../../images/placeholders/2meirl4meirl.jpg"
-        },
-        {
-          type: "video",
-          id: "m0002",
-          source: "../../images/placeholders/yesyesyesyesno.mp4"
-        }
-      ],
-      votes: 420,
-      id: "p0000",
-      upvoted: "false",
-      downvoted: "false",
-      user: { // link to contact page?
-        name: "gayboi",
-      },
-      url: "../../pages/post/post",
-      time: {
-        year: "2020",
-        month: "7",
-        day: "30",
-        hour: "20",
-        minute: "01"
-      },
-      comments: [{
-        text: "This is a comment",
-        votes: 11,
-        depth: 0,
-        id: "c0000",
-        children: [{
-          text: "This is a reply to a comment",
-          votes: 6,
-          depth: 1, 
-          id: "c0001",
-          children: [{
-            text: "This is the third",
-            votes: -1,
-            depth: 2, 
-            id: "c0002",
-            children: []
-          }]
-        }]
-      }, {
-        text: "Comment, but less popular",
-        votes: 6,
-        depth: 0, 
-        id: "c0003",
-        children: [{
-          text: "No one likes you",
-          votes: -12,
-          depth: 1,
-          id: "c0004",
-          children: []
-        }]
-      }]
+      // title: "Interesting Title 1",
+      // body: "Body text here- Lorem ipsum joihg kjhou oausdh oij kjhwo hsoduhf ouhl jknalkl oaihnfi- lngldm asldfkja iasudfh asiufh auishoqw q wofjh asdofiuh aushf weiourh sodif, sdog! asidf akdj fijawef.",
+      // media: [
+      //   {
+      //     type: "image",
+      //     id: "m0001",
+      //     source: "../../images/placeholders/2meirl4meirl.jpg"
+      //   },
+      //   {
+      //     type: "video",
+      //     id: "m0002",
+      //     source: "../../images/placeholders/yesyesyesyesno.mp4"
+      //   }
+      // ],
+      // votes: 420,
+      // id: "p0000",
+      // upvoted: "false",
+      // downvoted: "false",
+      // user: { // link to contact page?
+      //   name: "gayboi",
+      // },
+      // url: "../../pages/post/post",
+      // time: {
+      //   year: "2020",
+      //   month: "7",
+      //   day: "30",
+      //   hour: "20",
+      //   minute: "01"
+      // },
+      // comments: [{
+      //   text: "This is a comment",
+      //   votes: 11,
+      //   depth: 0,
+      //   id: "c0000",
+      //   children: [{
+      //     text: "This is a reply to a comment",
+      //     votes: 6,
+      //     depth: 1, 
+      //     id: "c0001",
+      //     children: [{
+      //       text: "This is the third",
+      //       votes: -1,
+      //       depth: 2, 
+      //       id: "c0002",
+      //       children: []
+      //     }]
+      //   }]
+      // }, {
+      //   text: "Comment, but less popular",
+      //   votes: 6,
+      //   depth: 0, 
+      //   id: "c0003",
+      //   children: [{
+      //     text: "No one likes you",
+      //     votes: -12,
+      //     depth: 1,
+      //     id: "c0004",
+      //     children: []
+      //   }]
+      // }]
     }
   },
 
@@ -200,7 +200,15 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    
+    const db = wx.cloud.database('scbasiscloud')
+    var that = this
+    db.collection('posts').doc(options.id).get({
+      success: function(res){
+        that.setData({
+          post: res
+        })
+      }
+    })
   },
 
   /**
