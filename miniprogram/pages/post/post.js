@@ -155,7 +155,7 @@ Page({
   },
 
   upv(event) {
-    pt = this.properties.post
+    var pt = this.properties.post
     if (pt.upvoted) {
       pt.votes--;
       pt.upvoted = false;
@@ -176,7 +176,7 @@ Page({
   },
 
   downv(event) {
-    pt = this.properties.post
+    var pt = this.properties.post
     if (pt.downvoted) {
       pt.votes++
       pt.downvoted = false;
