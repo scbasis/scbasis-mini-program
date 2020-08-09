@@ -74,5 +74,6 @@ Aug 8
 - component small post, new category page - Kenny
 - Categories list back + review - oliver
 
+
 Aug 15
 - Profile & notifications front
