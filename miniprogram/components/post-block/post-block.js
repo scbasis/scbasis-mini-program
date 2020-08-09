@@ -21,7 +21,6 @@ Component({
    * Component methods
    */
   methods: {
-
     upd: function(){
       const db = wx.cloud.database('scbasiscloud')
       const pt = this.properties.post

@@ -16,6 +16,7 @@ Page({
       url: '../home/home',
     })
   },
+
   onLoad: function (options) {
 
   },
