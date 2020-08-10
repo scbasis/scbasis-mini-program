@@ -55,7 +55,7 @@
   box-sizing: border-box;
   font-size:15px;
   text-transform: uppercase;
-  font-family:, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   letter-spacing: 2px;
 }
 

@@ -1,0 +1,64 @@
+.button {
+  width: fit-content;
+  padding: 0.3em 0.7em;
+  border-radius: 0.3em;
+  margin: 0.3em 0.7em;
+  background: #47625a;
+  color:#fff;
+  border-width:thin;
+}
+
+.button:active {
+  background: #fff;
+  color:#47625a;
+  border-width:thin;
+  border-color:#47625a;
+}
+
+.form-container {
+  margin: 1em;
+  margin-top: 4em;
+  border-radius: 0.5em;
+  background: white;
+  overflow: hidden;
+}
+
+.character-counter {
+  font-size: 0.8em;
+  font-weight: lighter;
+}
+
+.name-container {
+  background: #47625a;
+  color: snow;
+  padding: 0.5em;
+}
+
+.name-input {
+  line-height: 1.5em;
+  padding: 0.2em 0;
+}
+
+.input-placeholder {
+  color: rgb(204, 204, 204);
+}
+
+.description-container {
+  padding: 0.5em;
+}
+
+.description-textarea {
+  padding: 0.2em 0;
+  word-wrap: normal !important;
+  overflow-wrap: normal !important;
+}
+
+.footer {
+  border-top: solid 1px lightgray;
+}
+
+.create-button {
+  margin: 0.3em 0.5em;
+  float: right;
+}
+

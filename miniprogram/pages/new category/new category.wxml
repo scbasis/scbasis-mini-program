@@ -1,0 +1,26 @@
+<header-bar>
+  <navigator class="backButton button" url="../category list/category list">
+    <p class="buttonText">
+    Back
+    </p>
+  </navigator>
+</header-bar>
+
+<view class="form-container">
+  <form class="new-category-form">
+
+    <view class="name-container">
+      <input class="name-input" placeholder="Name of your category..." maxlength="40"
+      bindinput="getName"></input>
+      <view class="character-counter name-character-counter">{{name.length}}/40</view>
+    </view>
+    <view class="description-container">
+      <textarea class="description-textarea" placeholder="Some description..." maxlength="300"
+      bindinput="getDescription"></textarea>
+      <view class="character-counter description-character-counter">{{description.length}}/300</view>
+    </view>
+     <view class="footer">
+      <button size="mini" class="create-button button" form-type="submit">Create</button>
+     </view>
+  </form>
+</view>
