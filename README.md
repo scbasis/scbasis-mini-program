@@ -76,4 +76,8 @@ Aug 8
 
 
 Aug 15
-- Profile & notifications front
+- Notifications design- Sam
+- Profile front - Kenny
+- Random bug fixes - Kenny Oliver
+- Categories page back - Oliver 
+- Random design review and stuff - Anthea

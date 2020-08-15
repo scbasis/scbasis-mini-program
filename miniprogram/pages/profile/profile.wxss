@@ -1,0 +1,98 @@
+.backButton {
+  width: 4em;
+  font-size: 1.1em;
+  padding: 0.3em 0.1em;
+  border-radius: 0.2em;
+  margin-top: 5px;
+  margin-left: 8px;
+  background: #47625a;
+  color:#fff;
+  border-width:thick;
+  border-color:#47625a;
+  font-family:'Lucida Sans';
+  font-size:15px;
+  word-spacing: 1px;
+  text-align:center;
+}
+
+.backButton:active {
+  background: #fff;
+  color:#47625a;
+  border-width:4rpx;
+  border-color:#47625a;
+  text-align:center;
+}
+
+.section-1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1em;
+  margin-top: 3.5em;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: white;
+}
+
+.profile-pic-container {
+  flex: 1 1 30%;
+  vertical-align: middle;
+  margin: 0.7em;
+  border-radius: 20%;
+  overflow: hidden;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  max-width: 10em;
+  max-height: 10em;
+  object-fit: contain;
+}
+
+.personal-info-container {
+  flex: 1 1 60%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0.7em;
+}
+
+.personal-info {
+  display: inline-block;
+  flex: 1 1 40%; 
+  /* flex doesn't work - width of elements don't change */
+  margin: 0.2em;
+  padding: 0.2em 1em;
+  border-radius: 0.25em;
+  background-color: rgb(201, 208,	215);	
+  vertical-align: middle;
+}
+
+.personal-info-name {
+  flex: 2 1 60%;
+  padding: 0.2em 2em;
+}
+
+.info-container {
+  background-color: white; 
+  margin: 0.8em 1em;
+  padding: 0.2em;
+  border-radius: 0.4em;
+  vertical-align: middle;
+}
+
+.label {
+  display: inline-block;
+  font-size: 80%;
+  color: gray;
+  width: fit-content;
+  margin: 0.3em 0.3em;
+}
+
+.info {
+  flex: 1 1 80%;
+  display: inline-block;
+  margin: 0.3em 0.3em;
+}
+
