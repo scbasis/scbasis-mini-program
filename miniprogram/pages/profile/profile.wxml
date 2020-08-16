@@ -4,39 +4,50 @@
   </navigator>
 </header-bar>
 
-<view class="section-1">
-  <view class="profile-pic-container">
-    <image class="profile-pic" src="{{user.profilePicture}}" mode="widthFix"></image>
-  </view>
-  <view class="personal-info-container">
-    <view class="personal-info personal-info-name">{{user.name}}</view>
-    <view class="personal-info personal-info-school">{{user.school}}</view>
-    <view class="personal-info personal-info-grade">G{{user.grade}}</view>
-    <view class="personal-info personal-info-city">{{user.city}}</view>
-  </view>
-</view>
 
-<view class="section-2">
-  <view class="info-container whats-up-container">
-    <view class="label whats-up-label">What's up:</view>
-    <view class="info whats-up">{{user.whatsUp}}</view>
-  </view>
-  <view class="row2-container">
-    <view class="info-container total-posts-container">
-      <view class="label total-posts-label">Total posts:</view>
-      <view class="info total-posts">{{user.totalPosts}}</view>
+<view class="container">
+  <view class="section-1">
+    <view class="profile-pic-container">
+      <image class="profile-pic" src="{{user.profilePicture}}" mode="widthFix"></image>
     </view>
-    <view class="info-container total-comments-container">
-      <view class="label total-comments-label">Total comments:</view>
-      <view class="info total-comments">{{user.totalComments}}</view>
+    <view class="personal-info-container">
+      <view class="personal-info personal-info-name">{{user.name}}</view>
+      <view class="personal-info personal-info-school">{{user.school}}</view>
+      <view class="personal-info personal-info-grade">G{{user.grade}}</view>
+      <view class="personal-info personal-info-city">{{user.city}}</view>
     </view>
   </view>
-  <view class="info-container wechat-id-container">
-    <view class="label wechat-id-label">WeChat ID:</view>
-    <view class="info wechat-id">{{user.wechatID}}</view>
+
+  <view class="section-2">
+    <view class="info-container whats-up-container">
+      <view class="label whats-up-label">What's up:</view>
+      <view class="info whats-up">{{user.whatsUp}}</view>
+    </view>
+    <view class="row2-container">
+      <view class="info-container total-posts-container">
+        <view class="label total-posts-label">Total posts:</view>
+        <view class="info total-posts">{{user.totalPosts}}</view>
+      </view>
+      <view class="info-container total-comments-container">
+        <view class="label total-comments-label">Total comments:</view>
+        <view class="info total-comments">{{user.totalComments}}</view>
+      </view>
+    </view>
+    <view class="info-container wechat-id-container">
+      <view class="label wechat-id-label">WeChat ID:</view>
+      <view class="info wechat-id">{{user.wechatID}}</view>
+    </view>
+    <view class="info-container instagram-container">
+      <view class="label instagram-label">Instagram:</view>
+      <view class="info instagram">@{{user.instagram}}</view>
+    </view>
   </view>
-  <view class="info-container instagram-container">
-    <view class="label instagram-label">Instagram:</view>
-    <view class="info instagram">@{{user.instagram}}</view>
+
+  <view class="hottest-post-container">
+    <post-block-small post="{{user.hottestPost}}"></post-block-small>
+  </view>
+
+  <view class="message-button-container">
+    <button class="message-button">Message</button>
   </view>
 </view>
