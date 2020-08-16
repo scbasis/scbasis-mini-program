@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "header-bar": "../../components/header-bar/header-bar"
+    "header-bar": "../../components/header-bar/header-bar",
+    "back-button": "../../components/back-button/back-button"
   }
 }

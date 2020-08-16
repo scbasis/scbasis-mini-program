@@ -1,9 +1,5 @@
 <header-bar>
-  <navigator class="backButton button" url="../category list/category list">
-    <p class="buttonText">
-    Back
-    </p>
-  </navigator>
+  <back-button url="../category list/category list"></back-button>
 </header-bar>
 
 <view class="form-container">

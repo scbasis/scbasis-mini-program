@@ -1,7 +1,5 @@
 <header-bar>
-  <navigator class="backButton" url="../home/home">
-    Back
-  </navigator>
+  <back-button url="../home/home"></back-button>
 </header-bar>
 
 

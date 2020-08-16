@@ -3,6 +3,7 @@
     "header-bar": "../../components/header-bar/header-bar",
     "comment-block": "../../components/comment-block/comment-block",
     "up-arrow": "../../components/up-arrow/up-arrow",
-    "down-arrow": "../../components/down-arrow/down-arrow"
+    "down-arrow": "../../components/down-arrow/down-arrow",
+    "back-button": "../../components/back-button/back-button"
   }
 }

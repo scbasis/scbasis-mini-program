@@ -1,10 +1,6 @@
 <view class="container">
   <header-bar>
-    <navigator class="backButton" url="../home/home">
-      <p class="buttonText">
-        Back
-      </p>
-    </navigator>
+    <back-button url="../home/home"></back-button>
   </header-bar>
 
   <view class="main-container">
