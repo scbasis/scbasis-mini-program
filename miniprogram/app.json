@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/profile/profile",
     "pages/category/category",
+    "pages/profile/profile",
     "pages/new category/new category",
     "pages/category list/category list",
     "pages/post/post",

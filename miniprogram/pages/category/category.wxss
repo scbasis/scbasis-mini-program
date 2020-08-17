@@ -1,1 +1,32 @@
-/* miniprogram/pages/category/category.wxss */
+.container {
+  margin-top: 2.8em;
+}
+
+.category-name-container {
+  background-color: rgb(77, 97, 90);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2em;
+  color: white;
+  padding: 1em 0.5em;
+}
+
+.new-post-button-image {
+  vertical-align: middle;
+  width: 1.5em;
+}
+
+.body-container {
+  margin: 0 1em;
+}
+
+.description-container {
+  background-color: rgb(222, 168, 167);
+  padding: 1em;
+  margin: 0.5em 0;
+}
+
+.outer-post-container {
+  margin: 1.5em 0;
+}

@@ -1,0 +1,32 @@
+<header-bar>
+  <back-button url="../category list/category list"></back-button>
+  <!-- url could be category list or search page or (potentially post) -->
+</header-bar>
+
+<view class="container">
+  <view class="category-name-container">
+    <view class="cateogry-name">
+      {{category.name}}
+    </view>
+    <navigator url="../new post/new post" class="new-post-button-nav">
+      <image class="new-post-button-image" src="../../images/Greyplus.png" mode="widthFix"></image>
+    </navigator>
+  </view>
+
+  <view class="body-container">
+    <view class="description-container">
+      <!-- description - will need moderator, yes or no? -->
+      <view class="description">
+        {{category.description}}
+      </view>
+    </view>
+
+    <view class="posts-scroll-container">
+      <block wx:for="{{category.posts}}"  wx:for-item="post" wx:key="id">
+        <view class="outer-post-container">
+          <post-block post="{{post}}"></post-block>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

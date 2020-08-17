@@ -3,6 +3,14 @@
     <!-- post.url - add to post object -->
     {{post.title}}
   </navigator>
+
+  <view wx:if="{{post.new}}" class="new-container">
+    <view class="new-text">NEW</view>
+  </view>
+  <view wx:if="{{post.hot}}" class="hot-container">
+    <view class="hot-text">HOT</view>
+  </view>
+  
   <view class="vote-container">
     <up-arrow post="{{post}}" bindupv="upv"></up-arrow>
     <view class="num-votes">{{post.votes}}</view>
