@@ -81,3 +81,10 @@ Aug 15
 - Random bug fixes - Kenny Oliver
 - Categories page back - Oliver 
 - Random design review and stuff - Anthea
+
+Aug 22
+- notifications design - Sam
+- Category & profile page review - Anthea
+- New post & new comment functionality - Oliver
+- post-block - better media support, comments - collapse - Kenny
+* use github for feature/code discussions
