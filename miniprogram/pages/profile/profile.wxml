@@ -5,9 +5,8 @@
 
 <view class="container">
   <view class="section-1">
-    <view class="profile-pic-container">
-      <image class="profile-pic" src="{{user.profilePicture}}" mode="widthFix"></image>
-    </view>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      
     <view class="personal-info-container">
       <view class="personal-info personal-info-name">{{user.name}}</view>
       <view class="personal-info personal-info-school">{{user.school}}</view>

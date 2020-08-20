@@ -19,6 +19,12 @@ ul {
   margin-top: 5px 0px;
 }
 
+.getusernicknameButton{
+  margin-right:10px;
+  margin-left:10px;
+  font-size:13px;
+}
+
 .search-container {
   margin-top: 5px 0px;
   flex: 0.5 1  60%;
