@@ -117,8 +117,15 @@ Page({
   onShareAppMessage: function() {
 
   },
-
+  /**Put this here because it was giving bugs without it */
   loadMore: function(){
 
+  },
+
+  submitWhatsUp: function() {
+    console.log('success')
+    var forms = document.getElementById("What's up");
+    forms.style["display"] = 'none';
   }
+
 })

@@ -15,11 +15,8 @@
 }
 
 .userinfo-avatar {
-  width: 64px;
-  height: 64px;
-  max-width: 10em;
-  max-height: 10em;
-  object-fit: contain;
+  width: 80px;
+  height: 80px;
 }
 
 .personal-info-container {
