@@ -31,11 +31,17 @@
   <view class="section-2">
     <view class="info-container whats-up-container">
       <view class="label whats-up-label">What's up:</view>
-
-        <input type="text" id="What's up" placeholder="Tell people how you feel"></input>
-        <button size="mini" class="submit-button" form-type="submit" onclick="submitWhatsUp()">submit</button>
-      <!--<view class="info whats-up">{{user.whatsUp}}</view>-->
-
+      <view class="info whats-up" wx:if="{{user.whatsUpSet}}">{{user.whatsUp}}</view>
+      <form wx:else class="form whats-up-form" onsubmit="submitWhatsUp">
+        <view class="whats-up-flex">
+          <view class="input-container">
+            <input class="input" type="text" placeholder="Tell people how you feel" bindinput="getWhatsUpData"></input>
+          </view>
+          <view class="submit-container">
+            <button size="mini" class="submit-button" form-type="submit">Submit</button>
+          </view>
+        </view>
+      </form>
     </view>
 
     <view class="info-container wechat-id-container">

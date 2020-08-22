@@ -19,7 +19,8 @@ Page({
       grade: 10,
       city: "Guangzhou",
       // whatsUp: "this is a long what's up to test text wrapping poggers omegalul",
-      whatsUp: "poggers",
+      whatsUpSet: false,
+      whatsUp: "",
       totalPosts: 7,
       totalComments: 69,
       wechatID: "gayboi69420",
@@ -31,6 +32,21 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
+
+  getWhatsUpData: function(event){
+    this.setData({
+      "user.whatsUp": event.detail.value
+    })
+    console.log(this.data.user.whatsUp)
+  },
+
+  submitWhatsUp: function() {
+    console.log('success')
+    this.setData({
+      "user.whatsUpSet": true
+    });
+  },
+
   onLoad: function(options) {
     if (app.globalData.userInfo) {
       this.setData({
@@ -122,10 +138,5 @@ Page({
 
   },
 
-  submitWhatsUp: function() {
-    console.log('success')
-    var forms = document.getElementById("What's up");
-    forms.style["display"] = 'none';
-  }
-
+  
 })
