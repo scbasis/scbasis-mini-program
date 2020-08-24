@@ -1,5 +1,5 @@
 <view class="thread-container" onload="getChildrenHeight">
-  <view class="comment-container" style="--depth: {{comment.depth}};" bindtap="collapse">
+  <view class="comment-container" style="--depth: {{comment.depth}};" hover-class="comment-hover" bindtap="collapse">
     <view class="body-container">
       <view class="body-text">
         {{comment.text}}
@@ -26,7 +26,8 @@
 
   <view class="clr"></view>
 
-  <view wx:if="{{recurse==true}}" class="children-container" style="display: {{display}};">
+  <view wx:if="{{recurse==true}}" class="children-container" 
+    style="height: {{height}};" bindcollapse="handleChildrenCollapse">
     <comment-block wx:for="{{comment.children}}" wx:key="id" wx:for-item="child" comment="{{child}}"></comment-block>
   </view>
 </view>
