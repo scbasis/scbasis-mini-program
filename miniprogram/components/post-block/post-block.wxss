@@ -7,7 +7,8 @@
   border-radius: 5px;
   padding: 0.5em;
   position: relative;
-  height: 100%;
+  height: fit-content;
+  overflow: show;
   box-sizing: border-box;
 }
 
@@ -56,7 +57,7 @@
 .vote-container {
   padding-top: 1.4em;
   float: left;
-  width: 10%;
+  width: 2.5em;
 }
 
 .num-votes {
@@ -64,11 +65,45 @@
   color:#47625a;
 }
 
-.body-text {
+.body-container {
   padding-top: 1.4em;
   float: right;
-  width: 80%;
+  width: calc(100% - 3em);
+}
+
+.body-text {
+  height: fit-content;
+  overflow: hidden;
   font-size: 13px;
   color:black;
   font-family:'Lucida Sans';
+}
+
+.swiper-container {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+
+.swiper {
+  position: absolute;
+  top: 1em;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+}
+
+swiper-item {
+  vertical-align: middle;
+}
+
+.swiper-images {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.swiper-video {
+  width: 100%;
+  vertical-align: middle;
 }
