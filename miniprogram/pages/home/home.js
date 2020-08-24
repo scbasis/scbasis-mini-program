@@ -49,7 +49,7 @@ Page({
    */
   onLoad: function(options) {
 
-    // // for testing post page
+    // for testing post page
     // wx.navigateTo({
     //   url: '../post/post?id=8a6c3bf65f4111c0001a3b8c50883c79',
     // })

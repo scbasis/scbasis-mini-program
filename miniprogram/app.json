@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/profile/profile",
     "pages/home/home",
+    "pages/post/post",
+    "pages/profile/profile",
     "pages/category/category",
     "pages/new category/new category",
     "pages/category list/category list",
-    "pages/post/post",
     "pages/new post/new post",
     "pages/new comment/new comment",
     "pages/search/search"

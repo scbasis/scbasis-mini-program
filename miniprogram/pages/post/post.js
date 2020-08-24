@@ -200,15 +200,24 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    const db = wx.cloud.database('scbasiscloud')
+    const db = wx.cloud.database({env: "scbasiscloud"})
     var that = this
-    db.collection('posts').doc(options.id).get({
-      success: function(res){
-        that.setData({
-          post: res
-        })
-      }
+    
+    db.collection('posts').get().then(res => {
+      console.log(res.data);
+    }, res => {
+      console.log("test failed")
+      console.log(res)
     })
+    console.log("Post loading...")
+    db.collection('posts').doc(options.id).get().then(res => { // success
+        that.setData({
+          post: res.data
+        })
+      }, res => { // fail
+        console.log(res)
+      }
+    );
   },
 
   /**
