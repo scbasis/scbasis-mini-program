@@ -69,6 +69,32 @@ Page({
     }
   },
 
+  reply: function(event){
+    var cm = this.data.post.comments
+    for (var i = 0; i < cm.length; i++){
+      cm[i] = this.reply(event.id,cm[i])
+    }
+    this.setData({
+      comments: cm
+    })
+
+    this.upd()
+  },
+
+  replyRec: function(id, cm){
+    if (cm.id == id){
+      return addrep(cm)
+    }
+    for (var i = 0; i < cm.children.length; i++){
+      cm.children[i] = this.replyRec(id,cm.children[i])
+    }
+    return cm
+  },
+
+  addrep: function(cm){
+    cm.children = cm.children // add inputed text for comment
+    return cm
+  },
 
   onUpv: function(event){
     var cm = this.data.post.comments
@@ -79,6 +105,7 @@ Page({
       comments: cm
     })
 
+    this.upd()
   },
 
   recUp: function(id, cm){
@@ -115,6 +142,8 @@ Page({
     this.setData({
       comments: cm
     })
+
+    this.upd()
   },
 
   recDown: function(id, cm){
@@ -155,7 +184,7 @@ Page({
   },
 
   upv(event) {
-    var pt = this.properties.post
+    var pt = this.data.post
     if (pt.upvoted) {
       pt.votes--;
       pt.upvoted = false;
@@ -169,14 +198,14 @@ Page({
     }
 
     this.setData({
-      post: this.properties.post
+      post: this.data.post
     })
 
     this.upd()
   },
 
   downv(event) {
-    var pt = this.properties.post
+    var pt = this.data.post
     if (pt.downvoted) {
       pt.votes++
       pt.downvoted = false;
@@ -190,7 +219,7 @@ Page({
     }
 
     this.setData({
-      post: this.properties.post
+      post: this.data.post
     })
 
     this.upd()
