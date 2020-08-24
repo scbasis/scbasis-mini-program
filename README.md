@@ -1,5 +1,26 @@
 # scbasis-mini-program
 
+Tasks: (assigned ones are due Sep 5)
+- comment
+    - show commenter name & time - Oliver
+    - special comment style for author/editors
+    - anonymous mode - Oliver
+- new comment page redesign - Kenny
+- notification - front - Anthea
+- post
+    - expand to see original article (for comment section)
+    - formatting options for body text
+- new post
+    - fix category selection bug - Kenny
+    - anonymous mode
+- Profile page - Anthea
+(open issue on github to self-assign)
+
+Sam - *Category selections
+- name, description (thumbnail)
+- search
+
+
 Features for Pages
 - Home
     - Search bar
