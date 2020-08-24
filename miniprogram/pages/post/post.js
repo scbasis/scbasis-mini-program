@@ -202,6 +202,7 @@ Page({
     })
 
     this.upd()
+    console.log(this.data.post.votes)
   },
 
   downv(event) {
