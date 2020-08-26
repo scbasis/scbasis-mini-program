@@ -10,9 +10,42 @@
     <view class="personal-info-container">
       <view class="personal-info personal-info-name">{{userInfo.nickName}}</view>
 
-      <view class="personal-info personal-info-school">{{user.school}}</view>
-      <view class="personal-info personal-info-grade">G{{user.grade}}</view>
-      <view class="personal-info personal-info-city">{{user.city}}</view>
+      <!--School-->
+      <view class="school-container">
+        <view bindtap="editSchool" class="personal-info personal-info-school" wx:if="{{user.schoolSet}}">{{user.school}}</view>
+        <form wx:else class="school-form" onsubmit="submitSchool">
+          <view class="personal-info">
+            <input class="personal-info-input" type="text" placeholder="BISZ" bindinput="getSchool"></input>
+          </view>
+          <view class="submit-container">
+            <button size="mini" class="submit-button" form-type="submit">√</button>
+          </view>
+        </form>
+      </view>
+      <!--grade-->
+      <view class="grade-container">
+        <view bindtap="editGrade" class="personal-info personal-info-grade" wx:if="{{user.gradeSet}}">{{user.grade}}</view>
+        <form wx:else class="grade-form" onsubmit="submitGrade">
+          <view class="personal-info">
+            <input class="personal-info-input" type="text" placeholder="10" bindinput="getGrade"></input>
+          </view>
+          <view class="submit-container">
+            <button size="mini" class="submit-button" form-type="submit">√</button>
+          </view>
+        </form>
+      </view>
+      <!--city-->
+      <view class="city-container">
+        <view bindtap="editCity" class="personal-info personal-info-school" wx:if="{{user.citySet}}">{{user.city}}</view>
+        <form wx:else class="city-form" onsubmit="submitCity">
+          <view class="personal-info">
+            <input class="personal-info-input" type="text" placeholder="Guangzhou" bindinput="getCity"></input>
+          </view>
+          <view class="submit-container">
+            <button size="mini" class="submit-button" form-type="submit">√</button>
+          </view>
+        </form>
+      </view>
     </view>
   </view>
 

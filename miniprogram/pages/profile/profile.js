@@ -19,7 +19,6 @@ Page({
       grade: 10,
       city: "Guangzhou",
       // whatsUp: "this is a long what's up to test text wrapping poggers omegalul",
-      whatsUpSet: false,
       whatsUp: "",
       totalPosts: 7,
       totalComments: 69,
@@ -27,6 +26,69 @@ Page({
       instagram: "gayboiinsta696969",
       hottestPost: undefined // some kind of reference to the post - by id?
     }
+  },
+
+  getSchool: function (event) {
+    this.setData({
+      "user.school": event.detail.value
+    })
+    console.log(this.data.user.school)
+  },
+
+  submitSchool: function () {
+    console.log('success')
+    this.setData({
+      "user.schoolSet": true
+    });
+  }, 
+
+  editSchool: function () {
+    console.log('success')
+    this.setData({
+      "user.schoolSet": false
+    });
+  },
+
+  getGrade: function (event) {
+    this.setData({
+      "user.grade": event.detail.value
+    })
+    console.log(this.data.user.grade)
+  },
+
+  submitGrade: function () {
+    console.log('success')
+    this.setData({
+      "user.gradeSet": true
+    });
+  },
+
+  editGrade: function () {
+    console.log('success')
+    this.setData({
+      "user.gradeSet": false
+    });
+  },
+
+  getCity: function (event) {
+    this.setData({
+      "user.city": event.detail.value
+    })
+    console.log(this.data.user.city)
+  },
+
+  submitCity: function () {
+    console.log('success')
+    this.setData({
+      "user.citySet": true
+    });
+  },
+
+  editCiy: function () {
+    console.log('success')
+    this.setData({
+      "user.citySet": false
+    });
   },
 
   getWhatsUpData: function(event){

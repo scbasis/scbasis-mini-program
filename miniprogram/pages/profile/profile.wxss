@@ -51,6 +51,10 @@
   border-radius: 0.4em;
 }
 
+.personal-info-input{
+  size:50%;
+}
+
 .label {
   display: inline-block;
   width: fit-content;
