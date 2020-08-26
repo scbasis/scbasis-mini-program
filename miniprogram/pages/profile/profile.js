@@ -29,10 +29,6 @@ Page({
     }
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
-
   getWhatsUpData: function(event){
     this.setData({
       "user.whatsUp": event.detail.value
@@ -46,6 +42,59 @@ Page({
       "user.whatsUpSet": true
     });
   },
+
+  editWhatsUp: function(){
+    console.log('success')
+    this.setData({
+      "user.whatsUpSet": false
+    });
+  },
+
+  getWeChatID: function (event) {
+    this.setData({
+      "user.wechatID": event.detail.value
+    })
+    console.log(this.data.user.wechatID)
+  },
+
+  submitWeChatID: function () {
+    console.log('success')
+    this.setData({
+      "user.WeChatIDSet": true
+    });
+  },
+
+  editWeChatID: function() {
+    console.log('success')
+    this.setData({
+      "user.WeChatIDSet": false
+    });
+  },
+
+  getInstagram: function (event) {
+    this.setData({
+      "user.instagram": event.detail.value
+    })
+    console.log(this.data.user.instagram)
+  },
+
+  submitInstagram: function () {
+    console.log('success')
+    this.setData({
+      "user.InstagramSet": true
+    });
+  },
+
+  editInstagram: function () {
+    console.log('success')
+    this.setData({
+      "user.InstagramSet": false
+      
+    });
+  },
+   /**
+   * Lifecycle function--Called when page load
+   */
 
   onLoad: function(options) {
     if (app.globalData.userInfo) {
@@ -138,5 +187,4 @@ Page({
 
   },
 
-  
 })

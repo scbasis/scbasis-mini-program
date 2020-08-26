@@ -9,6 +9,7 @@
 
     <view class="personal-info-container">
       <view class="personal-info personal-info-name">{{userInfo.nickName}}</view>
+
       <view class="personal-info personal-info-school">{{user.school}}</view>
       <view class="personal-info personal-info-grade">G{{user.grade}}</view>
       <view class="personal-info personal-info-city">{{user.city}}</view>
@@ -16,26 +17,32 @@
   </view>
 
   <view class="row2-container">
-    <view class="info-container total-posts-container">
+    <view class="info-container-flex total-posts-container">
       <view class="label total-posts-label">Total posts:</view>
-      <view class="info total-posts">{{user.totalPosts}}</view>
+      <view class="info-flex-wrap total-posts">{{user.totalPosts}}</view>
     </view>
 
-    <view class="info-container total-comments-container">
+    <view class="info-container-flex total-comments-container">
       <view class="label total-comments-label">Total comments:</view>
-      <view class="info total-comments">{{user.totalComments}}</view>
+      <view class="info-flex-wrap total-comments">{{user.totalComments}}</view>
     </view>
   </view>
 
 
   <view class="section-2">
-    <view class="info-container whats-up-container">
-      <view class="label whats-up-label">What's up:</view>
-      <view class="info whats-up" wx:if="{{user.whatsUpSet}}">{{user.whatsUp}}</view>
+    <view class="info-container-flex whats-up-container">
+      <view class="label">What's up:</view>
+      <!--checks if user has already submitted a what's up form-->
+      <view class="info-flex-wrap whats-up" wx:if="{{user.whatsUpSet}}">
+        {{user.whatsUp}}
+        <!--allow user to edit their status after they submit the form by changing whats up to false through bindtap function-->
+        <image class="edit-button" bindtap="editWhatsUp" src="../../images/editPencil.png" mode="widthFix"></image>
+      </view>
+      <!--We allow the user to submit a form if the submit status is false-->
       <form wx:else class="form whats-up-form" onsubmit="submitWhatsUp">
-        <view class="whats-up-flex">
+        <view class="info-flex">
           <view class="input-container">
-            <input class="input" type="text" placeholder="Tell people how you feel" bindinput="getWhatsUpData"></input>
+            <input id="what's up" class="input" type="text" placeholder="Tell people how you feel" bindinput="getWhatsUpData"></input>
           </view>
           <view class="submit-container">
             <button size="mini" class="submit-button" form-type="submit">Submit</button>
@@ -44,14 +51,45 @@
       </form>
     </view>
 
-    <view class="info-container wechat-id-container">
-      <view class="label wechat-id-label">WeChat ID:</view>
-      <view class="info wechat-id">{{user.wechatID}}</view>
-      <view class="info wechat-id">{{userInfo.openId}}</view>
+    <view class="info-container-flex whats-up-container">
+      <view class="label">WeChat ID:</view>
+      <view class="info-flex-wrap wechat-id" wx:if="{{user.WeChatIDSet}}">
+        {{user.wechatID}}
+        <image class="edit-button" bindtap="editWeChatID" src="../../images/editPencil.png" mode="widthFix"></image>
+      </view>
+
+      <form wx:else class="form wechat-id-form" onsubmit="submitWeChatID">
+        <view class="info-flex">
+
+          <view class="input-container">
+            <input id="WechatID" class="input" type="text" placeholder="Share your WeChat" bindinput="getWeChatID"></input>
+          </view>
+          <view class="submit-container">
+            <button size="mini" class="submit-button" form-type="submit">Submit</button>
+          </view>
+
+        </view>
+      </form>
     </view>
-    <view class="info-container instagram-container">
-      <view class="label instagram-label">Instagram:</view>
-      <view class="info instagram">@{{user.instagram}}</view>
+
+    <view class="info-container-flex whats-up-container">
+      <view class="label">Instagram:</view>
+      <view class="info-flex-wrap" wx:if="{{user.InstagramSet}}">
+        @{{user.instagram}}
+        <image class="edit-button" bindtap="editInstagram" src="../../images/editPencil.png" mode="widthFix"></image>
+      </view>
+
+      <form wx:else class="form instagram-form" onsubmit="submitInstagram">
+        <view class="info-flex">
+
+          <view class="input-container">
+            <input id="instagram" class="input" type="text" placeholder="Share your Instagram" bindinput="getInstagram"></input>
+          </view>
+          <view class="submit-container">
+            <button size="mini" class="submit-button" form-type="submit">Submit</button>
+          </view>
+        </view>
+      </form>
     </view>
   </view>
 
