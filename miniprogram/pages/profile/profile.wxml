@@ -5,11 +5,17 @@
 
 <view class="container">
   <view class="section-1">
-    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-
+    <navigator wx:if="{{!hasUserInfo && canIUse}}" class="getusernicknameButton" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </navigator>
+<!--bug in navigator-->
+          <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          </block>
     <view class="personal-info-container">
-      <view class="personal-info personal-info-name">{{userInfo.nickName}}</view>
-
+      <navigator wx:if="{{!hasUserInfo && canIUse}}" class="personal-info getusernicknameButton" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </navigator>
+<!--bug in navigator-->
+        <block wx:else>
+        <view class="personal-info personal-info-name">{{userInfo.nickName}}</view>
+        </block>
       <!--School-->
       <view class="school-container">
         <view bindtap="editSchool" class="personal-info personal-info-school" wx:if="{{user.schoolSet}}">{{user.school}}</view>
