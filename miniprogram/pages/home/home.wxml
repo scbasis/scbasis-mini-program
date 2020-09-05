@@ -7,7 +7,9 @@
         <view class="userInfo">
           <navigator wx:if="{{!hasUserInfo && canIUse}}" class="getusernicknameButton" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </navigator>
           <block wx:else>
-          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <navigator url="../profile/profile">
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          </navigator>
           </block>
         </view>
       </li>
