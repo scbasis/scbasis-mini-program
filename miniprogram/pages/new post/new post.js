@@ -135,7 +135,6 @@ Page({
     const date = Date.now()
     
     db.collection('posts').count({success: function(res) {
-      console.log(res.total)
       db.collection('posts').add({
         data: {
           title: that.data.title,
@@ -155,6 +154,7 @@ Page({
           comments: []
         }
       })
+      console.log(res.total)
     }})
     
     wx.redirectTo({

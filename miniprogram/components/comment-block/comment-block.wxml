@@ -18,7 +18,7 @@
       </button>
 
       <view class="reply-button-container">
-        <button size="mini" class="reply-button" >Reply ↩ </button>
+        <button size="mini" class="reply-button" bindtouchend="">Reply ↩ </button>
       </view>
       <view class="clr"></view>
     </view>

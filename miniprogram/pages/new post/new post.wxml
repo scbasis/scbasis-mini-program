@@ -5,24 +5,24 @@
 
   <view class="main-container">
     <view class="post-container">
-      <form class="form" bindsubmit="createPost">
+      <form class="form">
         <view class="title">
           <textarea type="text" class="title-textarea" placeholder="Interesting title..." 
             placeholder-class="title-placeholder" bindinput="getTitleData"></textarea>
         </view>
         
-        <view class="picker-container">
+        <!-- <view class="picker-container">
           <picker mode="selector" bindchange="bindPickerChange" range="{{categories}}" value="index" class="category-selector">
             <view class="picker">
               <label class="choose-cat-uppercase">choose category ► </label>
               <label class="category-color-grey">{{categories[index]}}</label>
             </view>
           </picker>
-        </view>
+        </view> -->
 
         <view class="body-container">
           <textarea type="text" class="body-textarea" placeholder="Write something interesting here..."
-            placeholder-class="body-placeholder" maxlength="2000" bindinput="getContentData"></textarea>
+            placeholder-class="body-placeholder" maxlength="200" bindinput="getContentData"></textarea>
         </view>
 
         <!-- <view class="media-scroll-container">
@@ -47,7 +47,7 @@
             </button>
           </view>
           <view class="footer-right">
-            <button form-type="submit" class="submit-button" size="mini">Post!</button>
+            <button size="mini" bindtouchend="createPost">Post!</button>
           </view>
           <view class="clr"></view>
         </view>

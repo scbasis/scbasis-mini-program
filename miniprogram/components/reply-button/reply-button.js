@@ -1,13 +1,10 @@
-// components/back-button/back-button.js
+// components/reply-button.js
 Component({
   /**
    * Component properties
    */
   properties: {
-    url: {
-      type: String,
-      value: "../home/home"
-    }
+
   },
 
   /**
@@ -22,6 +19,5 @@ Component({
    */
   methods: {
 
-  },
-
+  }
 })
