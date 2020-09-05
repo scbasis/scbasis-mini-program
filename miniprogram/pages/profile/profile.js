@@ -84,7 +84,7 @@ Page({
     });
   },
 
-  editCiy: function () {
+  editCity: function () {
     console.log('success')
     this.setData({
       "user.citySet": false
