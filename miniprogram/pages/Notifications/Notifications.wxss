@@ -1,1 +1,24 @@
 /* miniprogram/pages/notifications/notifications.wxss */
+.activity-header{
+  padding: 5%;
+  background-color: #47625a;
+  color:white;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+}
+
+.notification-container-flex{
+  flex-direction:row;
+  flex-wrap:wrap;
+  margin:7%
+}
+
+.notification-icon{
+  width:10%;
+}
+
+.notification-content-container{
+  margin:0%;
+  background-color:white;
+}

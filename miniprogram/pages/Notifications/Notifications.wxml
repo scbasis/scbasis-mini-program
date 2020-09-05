@@ -1,4 +1,16 @@
 <!--miniprogram/pages/notifications/notifications.wxml-->
-<header-bar>
-  <back-button></back-button>
-</header-bar>
+<view class="activity-header">Activity</view>
+<view class="activities-container">
+  <!--stuff for the notification block-->
+    <view class="notification-container-flex">
+      <image class="notification-icon" src="../../images/Greyplus.png" mode="widthFix" ></image>
+      <view class="notification-content-container">comment
+      </view>
+    </view>
+    <view class="notification-container-flex">
+      <image class="notification-icon" src="../../images/Greyplus.png" mode="widthFix" ></image>
+    </view>
+    <view class="notification-container-flex">
+      <image class="notification-icon" src="../../images/Greyplus.png" mode="widthFix" ></image>
+    </view>
+</view>
