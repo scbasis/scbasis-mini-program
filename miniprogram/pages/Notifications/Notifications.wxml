@@ -3,14 +3,23 @@
 <view class="activities-container">
   <!--stuff for the notification block-->
     <view class="notification-container-flex">
-      <image class="notification-icon" src="../../images/Greyplus.png" mode="widthFix" ></image>
-      <view class="notification-content-container">comment
+      <image class="notification-icon" src="../../images/like.png" mode="widthFix" ></image>
+      <view class="notification-content-container">XXX liked ...
       </view>
     </view>
     <view class="notification-container-flex">
-      <image class="notification-icon" src="../../images/Greyplus.png" mode="widthFix" ></image>
+      <image class="notification-icon" src="../../images/comment.png" mode="widthFix" ></image>
+      <view class="notification-content-container">XXX commented on...
+      </view>
     </view>
     <view class="notification-container-flex">
-      <image class="notification-icon" src="../../images/Greyplus.png" mode="widthFix" ></image>
+      <image class="notification-icon" src="../../images/profile.jpg" mode="widthFix" ></image>
+      <view class="notification-content-container">XXX followed you
+      </view>
+    </view>
+    <view class="notification-container-flex">
+      <image class="notification-icon" src="../../images/profile.jpg" mode="widthFix" ></image>
+      <view class="notification-content-container">XXX posted ...
+      </view>
     </view>
 </view>
