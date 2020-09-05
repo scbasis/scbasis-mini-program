@@ -1,0 +1,4 @@
+<!--miniprogram/pages/notifications/notifications.wxml-->
+<header-bar>
+  <back-button></back-button>
+</header-bar>

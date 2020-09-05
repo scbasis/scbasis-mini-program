@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/notifications/notifications",
+    "pages/profile/profile",
     "pages/home/home",
     "pages/post/post",
-    "pages/profile/profile",
     "pages/category/category",
     "pages/new category/new category",
     "pages/category list/category list",
