@@ -11,14 +11,14 @@
             placeholder-class="title-placeholder" bindinput="getTitleData"></textarea>
         </view>
         
-        <!-- <view class="picker-container">
+        <view class="picker-container">
           <picker mode="selector" bindchange="bindPickerChange" range="{{categories}}" value="index" class="category-selector">
             <view class="picker">
               <label class="choose-cat-uppercase">choose category ► </label>
               <label class="category-color-grey">{{categories[index]}}</label>
             </view>
           </picker>
-        </view> -->
+        </view>
 
         <view class="body-container">
           <textarea type="text" class="body-textarea" placeholder="Write something interesting here..."

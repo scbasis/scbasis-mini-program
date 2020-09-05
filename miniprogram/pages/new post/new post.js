@@ -133,6 +133,7 @@ Page({
     const db = wx.cloud.database('scbasiscloud')
     var that = this
     const date = Date.now()
+    console.log("createPost: called")
     
     db.collection('posts').count({success: function(res) {
       db.collection('posts').add({
