@@ -7,17 +7,19 @@
     </view>
 
     <view class="vote-container">
-      <button id="{{'down-button-' + comment.id}}" class="downvote-button" size="mini">
+      <button id="{{'down-button-' + comment.id}}" class="downvote-button" size="mini" 
+      catchtap="emptyCatchTap" hover-stop-propagation>
         <image class="downvote" mode="WidthFix" src="../../images/pinkDownArrow.png"></image>
       </button>
 
-      <view class="num">{{comment.votes}}</view>
+      <view class="num" catchtap="emptyCatchTap" hover-stop-propagation>{{comment.votes}}</view>
 
-      <button id="{{'up-button-' + comment.id}}" class="upvote-button" size="mini">
+      <button id="{{'up-button-' + comment.id}}" class="upvote-button" size="mini" 
+      catchtap="emptyCatchTap" hover-stop-propagation>
         <image class="upvote" mode="WidthFix" src="../../images/pinkUpArrow.png"></image>
       </button>
 
-      <view class="reply-button-container">
+      <view class="reply-button-container" catchtap="replyTapped" hover-stop-propagation>
         <button size="mini" class="reply-button" >Reply ↩ </button>
       </view>
       <view class="clr"></view>
@@ -26,8 +28,23 @@
 
   <view class="clr"></view>
 
+  <view wx:if="{{showTextArea}}" class="reply-container">
+    <view class="reply-header">
+      Replying to the comment above
+    </view>
+    <textarea class="reply-textarea" placeholder="What's your reply?"></textarea>
+    <view class="reply-footer">
+      <button size="mini" class="reply-cancel-button" catchtap="replyCancel">Cancel</button>
+      <button size="mini" class="reply-send-button">Send</button>
+      <view class="clr"></view>
+    </view>
+  </view>
+
+  <view class="clr"></view>
+
   <view wx:if="{{recurse==true}}" class="children-container" 
-    style="height: {{height}};" bindcollapse="handleChildrenCollapse">
+    style="height: {{height}};" bindcollapse="handleHeightChange" catchreplyexapand="handleHeightChange">
     <comment-block wx:for="{{comment.children}}" wx:key="id" wx:for-item="child" comment="{{child}}"></comment-block>
   </view>
+  
 </view>

@@ -22,7 +22,8 @@ Component({
     display: "block",
     childrenHeight: 0,
     height: "fit-content",
-    heightValue: 0
+    heightValue: 0,
+    showTextArea: false
   },
   /**
    * Component lifecycle functions
@@ -81,7 +82,7 @@ Component({
       
     },
 
-    handleChildrenCollapse: function(e) {
+    handleHeightChange: function(e) {
       var heightChange = e.detail.heightChange
       // console.log(this.data.childrenHeight, heightChange)
       this.setData({
@@ -94,7 +95,35 @@ Component({
           })
         }
       })
+    },
+
+    emptyCatchTap: function(e) {
       
+    },
+
+    replyTapped: function(e) {
+      if (this.data.showTextArea) return;
+
+      this.triggerEvent("collapse", {
+        heightChange: 150
+      }, {
+        bubbles: true
+      })
+      this.setData({
+        showTextArea: true
+      })
+    },
+
+    replyCancel: function(e) {
+      if (!this.data.showTextArea) return;
+      this.triggerEvent("collapse", {
+        heightChange: -150
+      }, {
+        bubbles: true
+      })
+      this.setData({
+        showTextArea: false
+      })
     }
   }
 })

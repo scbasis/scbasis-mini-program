@@ -52,7 +52,8 @@
 
     <view class="comments-container">
       <view class="comments-header">Comments</view>
-      <comment-block wx:for="{{post.comments}}" wx:key="id" wx:for-item="comment" comment="{{comment}}"></comment-block>
+      <comment-block wx:for="{{post.comments}}" wx:key="id" wx:for-item="comment" 
+      comment="{{comment}}"></comment-block>
     </view>
   </view>
 
