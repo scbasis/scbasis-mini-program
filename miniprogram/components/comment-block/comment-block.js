@@ -23,7 +23,8 @@ Component({
     childrenHeight: 0,
     height: "fit-content",
     heightValue: 0,
-    showTextArea: false
+    showTextArea: false,
+    replyHeight: 0
   },
   /**
    * Component lifecycle functions
@@ -59,9 +60,10 @@ Component({
       // console.log("collapse() called", ev);
       if (this.data.collapsed) {
         this.triggerEvent("collapse", {
-          heightChange: -1 * this.data.childrenHeight
+          heightChange: -1 * this.data.childrenHeight,
         }, {
-          bubbles: true
+          bubbles: true,
+          composed: true
         })
         this.setData({
           height: "0px",
@@ -69,9 +71,10 @@ Component({
         });
       } else {
         this.triggerEvent("collapse", {
-          heightChange: this.data.childrenHeight
+          heightChange: this.data.childrenHeight,
         }, {
-          bubbles: true
+          bubbles: true,
+          composed: true
         })
         this.setData({
           heightValue: this.data.childrenHeight,
@@ -84,7 +87,8 @@ Component({
 
     handleHeightChange: function(e) {
       var heightChange = e.detail.heightChange
-      // console.log(this.data.childrenHeight, heightChange)
+      console.log(this.properties.comment.depth)
+      console.log(this.data.childrenHeight, heightChange)
       this.setData({
         childrenHeight: this.data.childrenHeight + heightChange
       }, () => {
@@ -105,25 +109,37 @@ Component({
       if (this.data.showTextArea) return;
 
       this.triggerEvent("collapse", {
-        heightChange: 150
+        heightChange: 150,
       }, {
-        bubbles: true
+        bubbles: true,
+        composed: true
       })
+      
       this.setData({
         showTextArea: true
+      }, () => {
+        this.setData({
+          replyHeight: this.data.replyHeight + 150
+        })
       })
     },
 
     replyCancel: function(e) {
       if (!this.data.showTextArea) return;
       this.triggerEvent("collapse", {
-        heightChange: -150
+        heightChange: -150,
       }, {
-        bubbles: true
+        bubbles: true,
+        composed: true
       })
       this.setData({
-        showTextArea: false
-      })
+        replyHeight: this.data.replyHeight + -150
+      }, () => {})
+      setTimeout(() => {
+        this.setData({
+          showTextArea: false
+        })
+      } ,200)
     }
   }
 })

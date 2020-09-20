@@ -86,6 +86,8 @@
   background: white;
   border-radius: 5px;
   box-sizing: border-box;
+  transition: height 0.2s;
+  overflow: hidden;
 }
 
 .reply-header {

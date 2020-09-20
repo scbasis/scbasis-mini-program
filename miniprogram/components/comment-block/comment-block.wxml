@@ -28,7 +28,7 @@
 
   <view class="clr"></view>
 
-  <view wx:if="{{showTextArea}}" class="reply-container">
+  <view wx:if="{{showTextArea}}" class="reply-container" style="height: {{replyHeight}}px">
     <view class="reply-header">
       Replying to the comment above
     </view>
@@ -43,7 +43,7 @@
   <view class="clr"></view>
 
   <view wx:if="{{recurse==true}}" class="children-container" 
-    style="height: {{height}};" bindcollapse="handleHeightChange" catchreplyexapand="handleHeightChange">
+    style="height: {{height}};" bindcollapse="handleHeightChange">
     <comment-block wx:for="{{comment.children}}" wx:key="id" wx:for-item="child" comment="{{child}}"></comment-block>
   </view>
   
